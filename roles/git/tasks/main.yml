@@ -1,0 +1,8 @@
+---
+- name: Push Git config file
+  template:
+    src: gitconfig.j2
+    dest: ~/.gitconfig
+    mode: '600'
+  tags:
+    - git

@@ -1,0 +1,8 @@
+---
+- name: Configure Dotfiles
+  hosts: all
+  connection: local
+  vars_files:
+    - vars/all.yml
+  roles:
+    - role: git
