@@ -6,3 +6,4 @@
     - vars/all.yml
   roles:
     - role: git
+    - role: neovim
