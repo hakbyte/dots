@@ -5,5 +5,6 @@
   vars_files:
     - vars/all.yml
   roles:
+    - role: zsh
     - role: git
     - role: neovim
