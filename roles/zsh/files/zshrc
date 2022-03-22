@@ -10,10 +10,6 @@ if [ $(command -v $fortune_cmd) ]; then
     $fortune_cmd
 fi
 
-#
-# Zsh plugins
-#
-
 # Auto suggestions -- requires `zsh-autosuggestions` package
 zsh_autosuggestions="/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 if [ -f $zsh_autosuggestions ]; then
@@ -31,9 +27,6 @@ setopt numericglobsort      # sort filenames numerically when it makes sense
 setopt promptsubst          # enable command substitution in prompt
 
 WORDCHARS=${WORDCHARS//\/}  # Don't consider certain characters part of the word
-
-# Hide EOL sign ('%')
-PROMPT_EOL_MARK=""
 
 EDITOR=nvim
 
@@ -130,6 +123,7 @@ configure_prompt() {
     unset prompt_sep
 }
 
+PROMPT_EOL_MARK=""  # Hide EOL sign ('%')
 NEWLINE_BEFORE_PROMPT=yes
 
 if [ "$color_prompt" = yes ]; then
