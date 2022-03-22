@@ -109,7 +109,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 configure_prompt() {
-    prompt_symbol=㉿
+    prompt_symbol=@
     # Skull emoji for root terminal
     [ "$EUID" -eq 0 ] && prompt_symbol=💀
     case "$PROMPT_ALTERNATIVE" in
@@ -119,7 +119,7 @@ configure_prompt() {
             #RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
             ;;
         oneline)
-            PROMPT=$'${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%B%F{%(#.red.blue)}%n@%m%b%F{reset}:%B%F{%(#.blue.green)}%~%b%F{reset}%(#.#.$) '
+            PROMPT=$'${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%B%F{%(#.red.blue)}%n'$prompt_symbol$'%m%b%F{reset}:%B%F{%(#.blue.green)}%~%b%F{reset}%(#.#.$) '
             RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
             ;;
         backtrack)
