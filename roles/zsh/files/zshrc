@@ -130,7 +130,7 @@ configure_prompt() {
     unset prompt_symbol
 }
 
-PROMPT_ALTERNATIVE=twoline
+PROMPT_ALTERNATIVE=oneline
 NEWLINE_BEFORE_PROMPT=yes
 
 if [ "$color_prompt" = yes ]; then
