@@ -1,0 +1,16 @@
+---
+- name: Create Flameshot config directory
+  file:
+    path: ~/.config/flameshot
+    state: directory
+    mode: '700'
+  tags:
+    - flameshot
+
+- name: Push Flameshot config file
+  copy:
+    src: flameshot.ini
+    dest: ~/.config/flameshot/flameshot.ini
+    mode: '600'
+  tags:
+    - flameshot
