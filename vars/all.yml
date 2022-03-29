@@ -1,9 +1,36 @@
 ---
 
 #
+# Colors
+#
+
+color:
+  fg:        '#abb2bf'
+  bg:        '#23272e'
+  normal:
+    black:   '#060e1a'
+    red:     '#e06c75'
+    green:   '#74b844'
+    yellow:  '#e5c07b'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#5c6370'
+  bright:
+    black:   '#3e4452'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow : '#e5c07b'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#abb2bf'
+
+#
 # Git
 #
 
 git:
   name: hakbyte
   email: hakbyte@users.noreply.github.com
+
