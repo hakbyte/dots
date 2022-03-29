@@ -49,14 +49,14 @@
 - name: Set Quake height percent
   dconf:
     key: "/com/gexperts/Tilix/quake-height-percent"
-    value: "65"
+    value: "{{ quake_height_percent }}"
   tags:
     - tilix
 
 - name: Set Quake width percent
   dconf:
     key: "/com/gexperts/Tilix/quake-width-percent"
-    value: "70"
+    value: "{{ quake_width_percent }}"
   tags:
     - tilix
 

@@ -32,8 +32,7 @@
 - name: Set font scaling factor
   dconf:
     key: "/org/gnome/desktop/interface/text-scaling-factor"
-    value: "1.1500000000000001"
-  when: target is defined and target == "desktop"
+    value: "{{ font_scaling_factor }}"
   tags:
     - gnome
 
