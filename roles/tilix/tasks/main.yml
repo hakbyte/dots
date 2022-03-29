@@ -107,12 +107,12 @@
   - name: Set background color
     dconf:
       key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/background-color"
-      value: "'#000000000000'"
+      value: "'{{ color.normal.black }}'"
 
   - name: Set foreground color
     dconf:
       key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/foreground-color"
-      value: "'#4747BCBC4B4B'"
+      value: "'{{ color.normal.green }}'"
 
   - name: Set background transparency
     dconf:
