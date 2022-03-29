@@ -117,10 +117,10 @@ vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " User arrow keys to manipulate tabs
-map <silent> <C-Left> <Esc>:tabprev<cr>
-map <silent> <C-Right> <Esc>:tabnext<cr>
-nnoremap <silent> <C-S-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<cr>
-nnoremap <silent> <C-S-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<cr>
+map <silent> <C-S-Left> <Esc>:tabprev<cr>
+map <silent> <C-S-Right> <Esc>:tabnext<cr>
+nnoremap <silent> <M-S-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<cr>
+nnoremap <silent> <M-S-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<cr>
 
 " Other useful mappings for managing tabs
 map <silent> <leader>tn :tabnew<cr>
