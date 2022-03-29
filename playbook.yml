@@ -8,5 +8,6 @@
     - role: zsh
     - role: git
     - role: neovim
+    - role: tilix
     - role: flameshot
     - role: gnome
