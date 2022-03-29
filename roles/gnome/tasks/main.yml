@@ -8,7 +8,7 @@
 
 - name: Detach modal dialogs
   dconf:
-    key: "/org/gnome/shell/overrides/attach-modal-dialogs"
+    key: "/org/gnome/mutter/attach-modal-dialogs"
     value: "false"
   tags:
     - gnome
