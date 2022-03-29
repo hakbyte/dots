@@ -1,0 +1,115 @@
+---
+
+# Reference: https://gist.github.com/carlwgeorge/c560a532b6929f49d9c0df52f75a68ae
+
+#
+# Settings
+#
+
+- name: Detach modal dialogs
+  dconf:
+    key: "/org/gnome/shell/overrides/attach-modal-dialogs"
+    value: "false"
+  tags:
+    - gnome
+
+- name: Set font scaling factor
+  dconf:
+    key: "/org/gnome/desktop/interface/text-scaling-factor"
+    value: "1.1500000000000001"
+  when: target is defined and target == "desktop"
+  tags:
+    - gnome
+
+#
+# Shortcuts
+#
+
+- name: Set file browser shortcut
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/home"
+    value: "['<Super>f']"
+  tags:
+    - gnome
+
+- name: Set web browser shortcut
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/www"
+    value: "['<Super>w']"
+  tags:
+    - gnome
+
+- name: Set close window shortcut
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/close"
+    value: "['<Super>k']"
+  tags:
+    - gnome
+
+- name: Toggle fullscreen mode with Ctrl + \
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/toggle-fullscreen"
+    value: "['<Primary>backslash']"
+  tags:
+    - gnome
+
+- name: Use Ctrl+Super+Right to move window to next workspace
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-right"
+    value: "['<Primary><Super>Right']"
+  tags:
+    - gnome
+
+- name: Use Ctrl+Super+Left to move window to previous workspace
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left"
+    value: "['<Primary><Super>Left']"
+  tags:
+    - gnome
+
+#
+# Custom Shortcuts
+#
+
+- name: Create custom shortcut for `tilix --quake` command
+  block:
+    - name: Create custom shortcut name
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name"
+        value: "'Tilix'"
+    - name: Assign command to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command"
+        value: "'tilix --quake'"
+    - name: Assign key binding to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding"
+        value: "'F12'"
+  tags:
+    - gnome
+
+- name: Create a custom shortcut for Flameshot
+  block:
+    - name: Create custom shortcut name
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name"
+        value: "'Flameshot'"
+    - name: Assign command to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command"
+        value: "'flameshot gui'"
+    - name: Assign key binding to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding"
+        value: "'<Super>Print'"
+  tags:
+    - gnome
+
+  # All of your custom shortcuts must be added to an array.
+
+- name: Enable custom shortcuts
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
+    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+  tags:
+    - gnome
