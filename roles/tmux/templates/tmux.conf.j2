@@ -1,0 +1,52 @@
+#
+# ~/.tmux.conf
+#
+
+# Configure term so that colors are correctly rendered
+set -g default-terminal screen-256color
+set -sa terminal-overrides ',xterm-256color:RGB'
+
+# Set a lower scape time to avoid issues with vim/nvim
+set -sg escape-time 10
+
+# Increase buffer to a "reasonable" limit
+set -g history-limit 50000
+
+# Enable mouse (useful for scrolling up and down using the touchpad)
+set -g mouse on
+
+# Remap prefix from 'C-b' to 'C-k'
+set -g prefix C-k
+bind-key C-k send-prefix
+unbind C-b
+
+# Turn off suggestions when renaming windows
+bind-key , command-prompt "rename-window '%%'"
+
+# Use vi bindings to switch panes.
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+bind / last-window
+bind ` kill-session
+bind r source-file ~/.tmux.conf \; display-message "~/.tmux.conf reloaded"
+
+#
+# Colors
+#
+
+# Set status bar color for messages and input commands
+set -g message-style 'fg={{ color.normal.green }},bg={{ color.bg }}'
+
+# Configure status format
+set-option -g status-left-length 60
+set-option -g status-style bg="{{ color.bg }}",fg="{{ color.fg }}"
+set-option -g status-left '#[fg={{ color.bg }},bg={{ color.normal.green }},bold] #S #[fg={{ color.normal.green }},bg={{ color.bg }},nobold,nounderscore,noitalics] '
+set-option -g status-right '#[fg={{ color.normal.green }},bg={{ color.bg }},bold] %R #[fg={{ color.normal.green }},bg={{ color.bg }}]#[fg={{ color.bg }},bg={{ color.normal.green }},bold] #h #[fg={{ color.normal.yellow }}, bg={{ color.normal.green }}]'
+set-option -g window-status-format '#[fg={{ color.normal.green }}]#W#F '
+set-option -g window-status-current-format '#[fg={{ color.normal.red }},bold]#W#F '
+
+# Set pane border color
+set -g pane-border-style 'fg={{ color.bright.black }}'
+set -g pane-active-border-style 'fg={{ color.bright.black }}'
