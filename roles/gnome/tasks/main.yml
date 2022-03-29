@@ -6,6 +6,22 @@
 # Settings
 #
 
+- name: Download wallpaper
+  get_url:
+    url: "{{ wallpaper.url }}"
+    dest: "{{ wallpaper.dest }}/{{ wallpaper.url | basename }}"
+    checksum: "{{ wallpaper.checksum }}"
+    mode: '600'
+  tags:
+    - gnome
+
+- name: Set wallpaper
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file:///{{ wallpaper.dest | expanduser }}{{ wallpaper.url | basename }}'"
+  tags:
+    - gnome
+
 - name: Detach modal dialogs
   dconf:
     key: "/org/gnome/mutter/attach-modal-dialogs"
