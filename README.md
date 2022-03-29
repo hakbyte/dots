@@ -1,11 +1,11 @@
 # TODO
 
-- [ ] Flameshot
+- [x] Flameshot
 - [ ] Pyenv
 - [ ] Zsh
-- [ ] Tmux
+- [x] Tmux
 - [ ] Homedirs
-- [ ] Tilix (including shortcuts + apperance -- all vida dconf)
+- [x] Tilix (including shortcuts + apperance -- all via dconf)
 - [ ] GTK?
 
 # Notes
