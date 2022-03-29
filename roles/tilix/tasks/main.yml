@@ -142,5 +142,25 @@
     dconf:
       key: "/com/gexperts/Tilix/keybindings/win-view-sidebar"
       value: "'<Primary>BackSpace'"
+
+  - name: Switch to terminal down
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-down"
+      value: "'<Primary>Down'"
+
+  - name: Switch to terminal up
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-up"
+      value: "'<Primary>Up'"
+
+  - name: Switch to terminal left
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-left"
+      value: "'<Primary>Left'"
+
+  - name: Switch to terminal right
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-right"
+      value: "'<Primary>Right'"
   tags:
     - tilix
