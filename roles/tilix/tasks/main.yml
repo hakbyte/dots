@@ -160,41 +160,41 @@
   - name: Switch to terminal down
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-down"
-      value: "'<Primary>Down'"
+      value: "'<Shift>Down'"
 
   - name: Switch to terminal up
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-up"
-      value: "'<Primary>Up'"
+      value: "'<Shift>Up'"
 
   - name: Switch to terminal left
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-left"
-      value: "'<Primary>Left'"
+      value: "'<Shift>Left'"
 
   - name: Switch to terminal right
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-right"
-      value: "'<Primary>Right'"
+      value: "'<Shift>Right'"
 
   - name: Resize terminal down
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-down"
-      value: "'<Shift>Down'"
+      value: "'<Shift><Alt>Down'"
 
   - name: Resize terminal up
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-up"
-      value: "'<Shift>Up'"
+      value: "'<Shift><Alt>Up'"
 
   - name: Resize terminal left
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-left"
-      value: "'<Shift>Left'"
+      value: "'<Shift><Alt>Left'"
 
   - name: Resize terminal right
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-right"
-      value: "'<Shift>Right'"
+      value: "'<Shift><Alt>Right'"
   tags:
     - tilix
