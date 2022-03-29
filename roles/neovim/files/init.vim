@@ -38,7 +38,6 @@ call plug#begin(expand('~/.config/nvim/plugged'))
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
-    Plug 'preservim/nerdtree'
     Plug 'cohama/lexima.vim'
 call plug#end()
 
@@ -143,9 +142,6 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
-
-" Toggle nerdtree on and off
-map <silent> <C-n> :NERDTreeToggle<cr>
 
 " Vim-fugitive
 map <silent> <leader>g0  :Gdiff :0<cr>
