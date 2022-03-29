@@ -8,3 +8,4 @@
     - role: zsh
     - role: git
     - role: neovim
+    - role: gnome
