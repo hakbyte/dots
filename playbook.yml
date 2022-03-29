@@ -4,6 +4,8 @@
   connection: local
   vars_files:
     - vars/all.yml
+  pre_tasks:
+    - import_tasks: tasks/pretasks.yml
   roles:
     - role: zsh
     - role: git

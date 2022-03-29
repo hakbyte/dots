@@ -1,0 +1,23 @@
+---
+
+#
+# Set variables based on selected target
+#
+
+- name: Set vars for Desktop target
+  set_fact:
+    font_scaling_factor: 1.1500000000000001
+    quake_height_percent: 65
+    quake_width_percent: 70
+  when: target == "desktop"
+  tags:
+    - always
+
+- name: Set vars for Laptop target
+  set_fact:
+    font_scaling_factor: 1.0
+    quake_height_percent: 80
+    quake_width_percent: 80
+  when: target == "laptop"
+  tags:
+    - always
