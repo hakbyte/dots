@@ -96,8 +96,8 @@ map <silent> <leader>/ :noh<cr>
 map <leader>s :setlocal spell!<cr>
 
 " Gives us the hability to quickly insert empty lines without leaving normal mode
-map <silent> <C-Up> :call AddBlankUp()<cr>
-map <silent> <C-Down> :call AddBlankDown()<cr>
+map <silent> <M-Up> :call AddBlankUp()<cr>
+map <silent> <M-Down> :call AddBlankDown()<cr>
 
 " Toggle terminal
 let termheight = 15
