@@ -157,6 +157,11 @@
       key: "/com/gexperts/Tilix/keybindings/win-view-sidebar"
       value: "'<Primary>BackSpace'"
 
+  - name: Maximize terminal
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/terminal-maximize"
+      value: "'<Primary><Shift>m'"
+
   - name: Switch to terminal down
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-down"
