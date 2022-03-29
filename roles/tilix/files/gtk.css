@@ -1,0 +1,10 @@
+
+/*
+ * References:
+ * - https://github.com/gnunn1/tilix/issues/1613
+ * - https://askubuntu.com/questions/115762/increase-padding-in-gnome-terminal
+ */
+VteTerminal, TerminalScreen, vte-terminal {
+    padding: 15px 15px 15px 15px;
+    -VteTerminal-inner-border: 15px 15px 15px 15px;
+}

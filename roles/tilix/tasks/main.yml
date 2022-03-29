@@ -1,0 +1,146 @@
+---
+- name: Push GTK CSS config file
+  copy:
+    src: gtk.css
+    dest: ~/.config/gtk-3.0/gtk.css
+    mode: '600'
+  tags:
+    - tilix
+
+#
+# Configure Tilix using dconf
+#
+
+- name: Set window style
+  dconf:
+    key: "/com/gexperts/Tilix/window-style"
+    value: "'disable-csd-hide-toolbar'"
+  tags:
+    - tilix
+
+- name: Enable mouse focus
+  dconf:
+    key: "/com/gexperts/Tilix/focus-follow-mouse"
+    value: "true"
+  tags:
+    - tilix
+
+- name: Hide Quake window when mouse focus is lost
+  dconf:
+    key: "/com/gexperts/Tilix/quake-hide-lose-focus"
+    value: "true"
+  tags:
+    - tilix
+
+- name: Move sidebar to the right
+  dconf:
+    key: "/com/gexperts/Tilix/sidebar-on-right"
+    value: "true"
+  tags:
+    - tilix
+
+- name: Assign Quake to main monitor
+  dconf:
+    key: "/com/gexperts/Tilix/quake-specific-monitor"
+    value: "0"
+  tags:
+    - tilix
+
+- name: Set Quake height percent
+  dconf:
+    key: "/com/gexperts/Tilix/quake-height-percent"
+    value: "65"
+  tags:
+    - tilix
+
+- name: Set Quake width percent
+  dconf:
+    key: "/com/gexperts/Tilix/quake-width-percent"
+    value: "70"
+  tags:
+    - tilix
+
+- name: Set up default profile
+  block:
+  # See https://gnunn1.github.io/tilix-web/manual/vteconfig/ for more details
+  - name: Fix VTE configuration for Default profile
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/login-shell"
+      value: "true"
+
+  - name: Hide scrollbar
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/show-scrollbar"
+      value: "false"
+
+  - name: Set scrollback to unlimited
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/scrollback-unlimited"
+      value: "true"
+
+  - name: Set terminal default size (columns)
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/default-size-columns"
+      value: "120"
+
+  - name: Set terminal default size (rows)
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/default-size-rows"
+      value: "30"
+
+  - name: Enable custom font
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/use-system-font"
+      value: "false"
+
+  - name: Set custom font type and size
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/font"
+      value: "'JetBrains Mono 10'"
+
+  # Required so that we can set our own custom colors
+  - name: Disable theme colors
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/use-theme-colors"
+      value: "false"
+
+  - name: Set background color
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/background-color"
+      value: "'#000000000000'"
+
+  - name: Set foreground color
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/foreground-color"
+      value: "'#4747BCBC4B4B'"
+
+  - name: Set background transparency
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/background-transparency-percent"
+      value: "15"
+
+  - name: Rename default profile
+    dconf:
+      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/visible-name"
+      value: "'Hak'"
+  tags:
+    - tilix
+
+- name: Set up keybindings
+  block:
+  - name: Add new terminal to current session
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-add-auto"
+      value: "'<Primary>Return'"
+
+  - name: Rename session
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-name"
+      value: "'<Primary>n'"
+
+  - name: Show sidebar
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/win-view-sidebar"
+      value: "'<Primary>BackSpace'"
+  tags:
+    - tilix
