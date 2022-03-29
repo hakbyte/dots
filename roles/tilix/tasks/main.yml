@@ -162,5 +162,25 @@
     dconf:
       key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-right"
       value: "'<Primary>Right'"
+
+  - name: Resize terminal down
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-down"
+      value: "'<Shift>Down'"
+
+  - name: Resize terminal up
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-up"
+      value: "'<Shift>Up'"
+
+  - name: Resize terminal left
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-left"
+      value: "'<Shift>Left'"
+
+  - name: Resize terminal right
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-right"
+      value: "'<Shift>Right'"
   tags:
     - tilix
