@@ -11,13 +11,6 @@
 # Configure Tilix using dconf
 #
 
-- name: Set window style
-  dconf:
-    key: "/com/gexperts/Tilix/window-style"
-    value: "'disable-csd-hide-toolbar'"
-  tags:
-    - tilix
-
 - name: Set terminal style
   dconf:
     key: "/com/gexperts/Tilix/terminal-title-style"
