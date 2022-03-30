@@ -58,6 +58,12 @@
   tags:
     - gnome
 
+- name: Add laptop specific tasks
+  include_tasks: laptop.yml
+  when: target is defined and target == "laptop"
+  tags:
+    - gnome
+
 #
 # Shortcuts
 #
