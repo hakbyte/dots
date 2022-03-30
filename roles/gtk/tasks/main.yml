@@ -1,0 +1,16 @@
+---
+- name: Create GTK config folder
+  file:
+    path: ~/.config/gtk-3.0
+    state: directory
+    mode: '700'
+  tags:
+    - gtk
+
+- name: Push GTK CSS file
+  template:
+    src: gtk.css.j2
+    dest: ~/.config/gtk-3.0/gtk.css
+    mode: '600'
+  tags:
+    - gtk

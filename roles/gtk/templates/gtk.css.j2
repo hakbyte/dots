@@ -1,0 +1,10 @@
+/*
+ * Increase padding for both Tilix and Gnome terminal.
+ * Reference:
+ * - https://github.com/gnunn1/tilix/issues/1613
+ * - https://askubuntu.com/questions/115762/increase-padding-in-gnome-terminal
+ */
+VteTerminal, TerminalScreen, vte-terminal {
+    padding: {{ gtk.terminal_padding }}px {{ gtk.terminal_padding }}px {{ gtk.terminal_padding }}px {{ gtk.terminal_padding }}px;
+    -VteTerminal-inner-border: {{ gtk.terminal_padding }}px {{ gtk.terminal_padding }}px {{ gtk.terminal_padding }}px {{ gtk.terminal_padding }}px;
+}

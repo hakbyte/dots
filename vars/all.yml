@@ -43,3 +43,9 @@ git:
   name: hakbyte
   email: hakbyte@users.noreply.github.com
 
+#
+# GTK
+#
+
+gtk:
+  terminal_padding: 10
