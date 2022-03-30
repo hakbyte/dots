@@ -68,6 +68,11 @@
         key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/login-shell"
         value: "true"
 
+    - name: Disable terminal bell
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/terminal-bell"
+        value: "'none'"
+
     - name: Hide scrollbar
       dconf:
         key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/show-scrollbar"
