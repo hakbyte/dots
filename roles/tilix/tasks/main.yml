@@ -32,13 +32,6 @@
   tags:
     - tilix
 
-- name: Hide Quake window when mouse focus is lost
-  dconf:
-    key: "/com/gexperts/Tilix/quake-hide-lose-focus"
-    value: "true"
-  tags:
-    - tilix
-
 - name: Move sidebar to the right
   dconf:
     key: "/com/gexperts/Tilix/sidebar-on-right"
