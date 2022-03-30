@@ -6,6 +6,14 @@
 # Settings
 #
 
+- name: Create `~/.local/share/backgrounds`
+  file:
+    path: ~/.local/share/backgrounds
+    state: directory
+    mode: '700'
+  tags:
+    - gnome
+
 - name: Download wallpaper
   get_url:
     url: "{{ wallpaper.url }}"
