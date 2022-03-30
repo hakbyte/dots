@@ -9,6 +9,7 @@
 - [ ] GTK: shrink titlebars (see eog app)?
 - [ ] Also change appearance of gnome terminal (default from Kali with Gnome DE)
 - [ ] Use different terminal paddings for Laptop and Desktop
+- [ ] Add shortcut to launch a regular terminal (maybe Tilix, maybe Gnome terminal)
 
 # Notes
 
