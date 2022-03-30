@@ -11,6 +11,13 @@
 # Configure Tilix using dconf
 #
 
+- name: Set application title
+  dconf:
+    key: "/com/gexperts/Tilix/app-title"
+    value: "'${sessionName}'"
+  tags:
+    - tilix
+
 - name: Set terminal style
   dconf:
     key: "/com/gexperts/Tilix/terminal-title-style"
