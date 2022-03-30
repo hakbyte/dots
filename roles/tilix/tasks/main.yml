@@ -69,135 +69,135 @@
 
 - name: Set up default profile
   block:
-  # See https://gnunn1.github.io/tilix-web/manual/vteconfig/ for more details
-  - name: Fix VTE configuration for Default profile
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/login-shell"
-      value: "true"
+    # See https://gnunn1.github.io/tilix-web/manual/vteconfig/ for more details
+    - name: Fix VTE configuration for Default profile
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/login-shell"
+        value: "true"
 
-  - name: Hide scrollbar
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/show-scrollbar"
-      value: "false"
+    - name: Hide scrollbar
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/show-scrollbar"
+        value: "false"
 
-  - name: Set scrollback to unlimited
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/scrollback-unlimited"
-      value: "true"
+    - name: Set scrollback to unlimited
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/scrollback-unlimited"
+        value: "true"
 
-  - name: Set terminal default size (columns)
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/default-size-columns"
-      value: "120"
+    - name: Set terminal default size (columns)
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/default-size-columns"
+        value: "120"
 
-  - name: Set terminal default size (rows)
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/default-size-rows"
-      value: "30"
+    - name: Set terminal default size (rows)
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/default-size-rows"
+        value: "30"
 
-  - name: Enable custom font
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/use-system-font"
-      value: "false"
+    - name: Enable custom font
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/use-system-font"
+        value: "false"
 
-  - name: Set custom font type and size
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/font"
-      value: "'JetBrains Mono 10'"
+    - name: Set custom font type and size
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/font"
+        value: "'JetBrains Mono 10'"
 
-  # Required so that we can set our own custom colors
-  - name: Disable theme colors
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/use-theme-colors"
-      value: "false"
+    # Required so that we can set our own custom colors
+    - name: Disable theme colors
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/use-theme-colors"
+        value: "false"
 
-  - name: Set background color
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/background-color"
-      value: "'{{ color.normal.black }}'"
+    - name: Set background color
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/background-color"
+        value: "'{{ color.normal.black }}'"
 
-  - name: Set foreground color
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/foreground-color"
-      value: "'{{ color.normal.green }}'"
+    - name: Set foreground color
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/foreground-color"
+        value: "'{{ color.normal.green }}'"
 
-  - name: Set background transparency
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/background-transparency-percent"
-      value: "15"
+    - name: Set background transparency
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/background-transparency-percent"
+        value: "15"
 
-  - name: Rename default profile
-    dconf:
-      key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/visible-name"
-      value: "'Hak'"
+    - name: Rename default profile
+      dconf:
+        key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/visible-name"
+        value: "'Hak'"
   tags:
     - tilix
 
 - name: Set up keybindings
   block:
-  - name: Add new terminal to down
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-add-down"
-      value: "'<Primary>Return'"
+    - name: Add new terminal to down
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-add-down"
+        value: "'<Primary>Return'"
 
-  - name: Add new terminal to the right
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-add-right"
-      value: "'<Primary><Shift>Return'"
+    - name: Add new terminal to the right
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-add-right"
+        value: "'<Primary><Shift>Return'"
 
-  - name: Rename session
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-name"
-      value: "'<Primary>n'"
+    - name: Rename session
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-name"
+        value: "'<Primary>n'"
 
-  - name: Show sidebar
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/win-view-sidebar"
-      value: "'<Primary>BackSpace'"
+    - name: Show sidebar
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/win-view-sidebar"
+        value: "'<Primary>BackSpace'"
 
-  - name: Maximize terminal
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/terminal-maximize"
-      value: "'<Primary><Shift>m'"
+    - name: Maximize terminal
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/terminal-maximize"
+        value: "'<Primary><Shift>m'"
 
-  - name: Switch to terminal down
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-down"
-      value: "'<Shift>Down'"
+    - name: Switch to terminal down
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-down"
+        value: "'<Shift>Down'"
 
-  - name: Switch to terminal up
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-up"
-      value: "'<Shift>Up'"
+    - name: Switch to terminal up
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-up"
+        value: "'<Shift>Up'"
 
-  - name: Switch to terminal left
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-left"
-      value: "'<Shift>Left'"
+    - name: Switch to terminal left
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-left"
+        value: "'<Shift>Left'"
 
-  - name: Switch to terminal right
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-right"
-      value: "'<Shift>Right'"
+    - name: Switch to terminal right
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-right"
+        value: "'<Shift>Right'"
 
-  - name: Resize terminal down
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-down"
-      value: "'<Shift><Alt>Down'"
+    - name: Resize terminal down
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-down"
+        value: "'<Shift><Alt>Down'"
 
-  - name: Resize terminal up
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-up"
-      value: "'<Shift><Alt>Up'"
+    - name: Resize terminal up
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-up"
+        value: "'<Shift><Alt>Up'"
 
-  - name: Resize terminal left
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-left"
-      value: "'<Shift><Alt>Left'"
+    - name: Resize terminal left
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-left"
+        value: "'<Shift><Alt>Left'"
 
-  - name: Resize terminal right
-    dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-right"
-      value: "'<Shift><Alt>Right'"
+    - name: Resize terminal right
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/session-resize-terminal-right"
+        value: "'<Shift><Alt>Right'"
   tags:
     - tilix
