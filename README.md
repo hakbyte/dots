@@ -4,9 +4,11 @@
 - [ ] Pyenv
 - [ ] Zsh
 - [x] Tmux
-- [ ] Homedirs
+- [ ] Homedirs: how to deal with defaults in Files app?
 - [x] Tilix (including shortcuts + apperance -- all via dconf)
-- [ ] GTK?
+- [ ] GTK: shrink titlebars (see eog app)?
+- [ ] Also change appearance of gnome terminal (default from Kali with Gnome DE)
+- [ ] Use different terminal paddings for Laptop and Desktop
 
 # Notes
 
