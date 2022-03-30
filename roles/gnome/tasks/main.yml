@@ -43,6 +43,13 @@
   tags:
     - gnome
 
+- name: Set keyboard layout to US International
+  dconf:
+    key: "/org/gnome/desktop/input-sources/sources"
+    value: "[('xkb', 'us+intl')]"
+  tags:
+    - gnome
+
 #
 # Shortcuts
 #
