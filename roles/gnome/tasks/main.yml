@@ -29,6 +29,13 @@
   tags:
     - gnome
 
+- name: Disable hot corners
+  dconf:
+    key: "/org/gnome/desktop/interface/enable-hot-corners"
+    value: "false"
+  tags:
+    - gnome
+
 - name: Set font scaling factor
   dconf:
     key: "/org/gnome/desktop/interface/text-scaling-factor"
