@@ -135,10 +135,15 @@
 
 - name: Set up keybindings
   block:
-  - name: Add new terminal to current session
+  - name: Add new terminal to down
     dconf:
-      key: "/com/gexperts/Tilix/keybindings/session-add-auto"
+      key: "/com/gexperts/Tilix/keybindings/session-add-down"
       value: "'<Primary>Return'"
+
+  - name: Add new terminal to the right
+    dconf:
+      key: "/com/gexperts/Tilix/keybindings/session-add-right"
+      value: "'<Primary><Shift>Return'"
 
   - name: Rename session
     dconf:
