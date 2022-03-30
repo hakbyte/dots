@@ -26,7 +26,7 @@
 - name: Set wallpaper
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
-    value: "'file:///{{ wallpaper.dest | expanduser }}{{ wallpaper.url | basename }}'"
+    value: "'file:///{{ wallpaper.dest | expanduser }}/{{ wallpaper.url | basename }}'"
   tags:
     - gnome
 
