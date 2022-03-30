@@ -1,11 +1,4 @@
 ---
-- name: Push GTK CSS config file
-  copy:
-    src: gtk.css
-    dest: ~/.config/gtk-3.0/gtk.css
-    mode: '600'
-  tags:
-    - tilix
 
 #
 # Configure Tilix using dconf
