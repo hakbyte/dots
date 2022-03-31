@@ -121,9 +121,8 @@ configure_prompt() {
     # Right-side prompt with exit codes and background processes
     RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
     unset prompt_sep
+    PROMPT_EOL_MARK=""  # Hide EOL sign ('%')
 }
-
-PROMPT_EOL_MARK=""  # Hide EOL sign ('%')
 
 if [ "$color_prompt" = yes ]; then
     # Override default virtualenv indicator in prompt
