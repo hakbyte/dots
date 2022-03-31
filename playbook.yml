@@ -16,3 +16,4 @@
     - role: flameshot
     - role: gnome
     - role: homedirs
+    - role: xdg
