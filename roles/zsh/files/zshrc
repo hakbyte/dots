@@ -124,7 +124,6 @@ configure_prompt() {
 }
 
 PROMPT_EOL_MARK=""  # Hide EOL sign ('%')
-NEWLINE_BEFORE_PROMPT=yes
 
 if [ "$color_prompt" = yes ]; then
     # Override default virtualenv indicator in prompt
