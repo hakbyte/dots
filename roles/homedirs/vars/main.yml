@@ -1,0 +1,14 @@
+---
+dirs:
+  - attic
+  - code
+  - desktop
+  - down
+  - files
+  - ha
+  - media
+  - pics
+  - vbox/backup
+  - vbox/disk
+  - vbox/shared
+  - vbox/vms

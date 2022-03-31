@@ -1,0 +1,25 @@
+---
+- name: Delete default home directories
+  file:
+    path: ~/{{ item }}
+    state: absent
+  loop:
+    - Desktop
+    - Documents
+    - Downloads
+    - Music
+    - Pictures
+    - Public
+    - Templates
+    - Videos
+  tags:
+    - homedirs
+
+- name: Create user home directories
+  file:
+    path: ~/{{ item }}
+    state: directory
+    mode: '700'
+  loop: "{{ dirs }}"
+  tags:
+    - homedirs
