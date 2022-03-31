@@ -7,8 +7,7 @@
 - [ ] Homedirs: how to deal with defaults in Files app?
 - [x] Tilix (including shortcuts + apperance -- all via dconf)
 - [ ] GTK: shrink titlebars (see eog app)?
-- [ ] Also change appearance of gnome terminal (default from Kali with Gnome DE)
-- [ ] Use different terminal paddings for Laptop and Desktop
+- [x] Also change appearance of gnome terminal (default from Kali with Gnome DE)
 - [ ] Add shortcut to launch a regular terminal (maybe Tilix, maybe Gnome terminal)
 
 # Notes
