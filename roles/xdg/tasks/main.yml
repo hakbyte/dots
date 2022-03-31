@@ -1,0 +1,9 @@
+---
+- name: Push XDG config files
+  copy:
+    src: "{{ item }}"
+    dest: ~/.config
+    mode: '600'
+  with_fileglob: 'files/*'
+  tags:
+    - xdg
