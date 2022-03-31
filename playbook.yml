@@ -15,3 +15,4 @@
     - role: tilix
     - role: flameshot
     - role: gnome
+    - role: homedirs
