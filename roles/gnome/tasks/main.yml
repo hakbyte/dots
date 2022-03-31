@@ -58,6 +58,13 @@
   tags:
     - gnome
 
+- name: Dont't show notifications on lock screen
+  dconf:
+    key: "/org/gnome/desktop/notifications/show-in-lock-screen"
+    value: "false"
+  tags:
+    - gnome
+
 - name: Add laptop specific tasks
   include_tasks: laptop.yml
   when: target is defined and target == "laptop"
