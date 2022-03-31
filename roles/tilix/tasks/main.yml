@@ -122,7 +122,7 @@
     - name: Set background transparency
       dconf:
         key: "/com/gexperts/Tilix/profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d/background-transparency-percent"
-        value: "15"
+        value: "10"
 
     - name: Rename default profile
       dconf:
