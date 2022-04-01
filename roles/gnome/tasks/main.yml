@@ -96,6 +96,20 @@
   tags:
     - gnome
 
+- name: Set Dash to Dock transparency mode to 'FIXED'
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/transparency-mode"
+    value: "'FIXED'"
+  tags:
+    - gnome
+
+- name: Set Dash to Dock background opacity
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/background-opacity"
+    value: "0.90"
+  tags:
+    - gnome
+
 - name: Add laptop specific tasks
   include_tasks: laptop.yml
   when: target is defined and target == "laptop"
