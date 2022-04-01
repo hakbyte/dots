@@ -82,6 +82,13 @@
   tags:
     - gnome
 
+- name: Set Dash to Dock background color
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/background-color"
+    value: "'{{ color.normal.black }}'"
+  tags:
+    - gnome
+
 - name: Add laptop specific tasks
   include_tasks: laptop.yml
   when: target is defined and target == "laptop"
