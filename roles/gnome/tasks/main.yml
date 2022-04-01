@@ -82,6 +82,13 @@
   tags:
     - gnome
 
+- name: Enable Dash to Dock custom background color
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/custom-background-color"
+    value: "true"
+  tags:
+    - gnome
+
 - name: Set Dash to Dock background color
   dconf:
     key: "/org/gnome/shell/extensions/dash-to-dock/background-color"
