@@ -1,0 +1,25 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "editor.fontFamily": "JetBrains Mono,Noto Color Emoji",
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "vscode-icons",
+    "oneDarkPro.bold": true,
+    "oneDarkPro.italic": true,
+    "oneDarkPro.vivid": true,
+    "oneDarkPro.markdownStyle": true,
+    "markdown.preview.typographer": true,
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "gitlens.currentLine.format": "${agoOrDate}${ • message|50?}",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.views.commits.avatars": false,
+    "emojisense.unicodeCompletionsEnabled": false,
+    "emojisense.emojiDecoratorsEnabled": false,
+    "cSpell.languageSettings": [
+        {
+            "languageId": "markdown",
+            "ignoreRegExpList": [ "/^\\s*```[\\s\\S]*?^\\s*```/gm", "/`.*`/gm" ]
+        }
+    ]
+}

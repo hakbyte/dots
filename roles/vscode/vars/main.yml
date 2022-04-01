@@ -1,0 +1,12 @@
+---
+extensions:
+  - bierner.emojisense
+  - eamodio.gitlens
+  - jebbs.markdown-extended
+  - mushan.vscode-paste-image
+  - stkb.rewrap
+  - streetsidesoftware.code-spell-checker
+  - tomoki1207.pdf
+  - vscode-icons-team.vscode-icons
+  - yzhang.markdown-all-in-one
+  - zhuangtongfa.material-theme
