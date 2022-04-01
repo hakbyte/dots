@@ -158,6 +158,11 @@
         key: "/com/gexperts/Tilix/keybindings/terminal-maximize"
         value: "'<Primary>m'"
 
+    - name: Toggle fullscreen
+      dconf:
+        key: "/com/gexperts/Tilix/keybindings/win-fullscreen"
+        value: "'<Primary><Shift>m'"
+
     - name: Switch to terminal down
       dconf:
         key: "/com/gexperts/Tilix/keybindings/session-switch-to-terminal-down"
