@@ -17,3 +17,4 @@
     - role: gnome
     - role: homedirs
     - role: xdg
+    - role: vscode
