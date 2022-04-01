@@ -92,7 +92,7 @@
 - name: Set Dash to Dock background color
   dconf:
     key: "/org/gnome/shell/extensions/dash-to-dock/background-color"
-    value: "'{{ color.normal.black }}'"
+    value: "'{{ color.bg }}'"
   tags:
     - gnome
 
@@ -106,7 +106,7 @@
 - name: Set Dash to Dock background opacity
   dconf:
     key: "/org/gnome/shell/extensions/dash-to-dock/background-opacity"
-    value: "0.90"
+    value: "0.35"
   tags:
     - gnome
 
