@@ -165,7 +165,7 @@
 # Custom Shortcuts
 #
 
-- name: Create custom shortcut for `tilix --quake` command
+- name: Create custom shortcut for launching Tilix in Quake mode
   block:
     - name: Create custom shortcut name
       dconf:
@@ -182,7 +182,7 @@
   tags:
     - gnome
 
-- name: Create a custom shortcut for Flameshot
+- name: Create a custom shortcut for launching Flameshot
   block:
     - name: Create custom shortcut name
       dconf:
