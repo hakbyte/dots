@@ -1,0 +1,7 @@
+---
+- name: Disable automatic suspend
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type"
+    value: "'nothing'"
+  tags:
+    - gnome

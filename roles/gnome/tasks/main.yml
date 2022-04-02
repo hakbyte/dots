@@ -116,6 +116,12 @@
   tags:
     - gnome
 
+- name: Add Desktop specific tasks
+  include_tasks: desktop.yml
+  when: target is defined and target == "desktop"
+  tags:
+    - gnome
+
 #
 # Shortcuts
 #
