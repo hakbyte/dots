@@ -212,7 +212,7 @@
     - name: Assign key binding to custom shortcut
       dconf:
         key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding"
-        value: "'<Primary>f'"
+        value: "'<Super>f'"
   tags:
     - gnome
 
