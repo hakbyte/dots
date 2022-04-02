@@ -110,7 +110,7 @@
   tags:
     - gnome
 
-- name: Add laptop specific tasks
+- name: Add Laptop specific tasks
   include_tasks: laptop.yml
   when: target is defined and target == "laptop"
   tags:
