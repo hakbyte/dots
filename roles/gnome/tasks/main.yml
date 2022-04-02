@@ -199,12 +199,31 @@
   tags:
     - gnome
 
-  # All of your custom shortcuts must be added to an array.
+- name: Create custom shortcut for launching Nautilus
+  block:
+    - name: Create custom shortcut name
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name"
+        value: "'Nautilus'"
+    - name: Assign command to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command"
+        value: "'nautilus --new-window'"
+    - name: Assign key binding to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding"
+        value: "'<Primary>f'"
+  tags:
+    - gnome
 
+# All of your custom shortcuts must be added to an array
 - name: Enable custom shortcuts
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
-    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+    value: "[\
+      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/',\
+      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/',\
+      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']"
   tags:
     - gnome
 
