@@ -7,7 +7,6 @@ dirs:
   - files
   - media
   - pics
-  - vbox/backup
   - vbox/disk
   - vbox/shared
   - vbox/vms
