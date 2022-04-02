@@ -126,13 +126,6 @@
 # Shortcuts
 #
 
-- name: Set file browser shortcut
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/media-keys/home"
-    value: "['<Super>f']"
-  tags:
-    - gnome
-
 - name: Set web browser shortcut
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/www"
