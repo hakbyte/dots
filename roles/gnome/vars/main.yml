@@ -1,5 +1,5 @@
 ---
 wallpaper:
   url: https://github.com/hakbyte/wallpapers/raw/main/art/7f87f27ad29252ecfc0d_3641x2017.jpg
-  checksum: "sha1:7f87f27ad29252ecfc0dc17ae57b89273150e5b2"
+  checksum: sha256:84a96fb6e14d03d02779810e5fc07bd133a46021867f39e64767e5978a2cddff
   dest: ~/.local/share/backgrounds
