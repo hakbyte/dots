@@ -68,17 +68,7 @@
 - name: Set favorite apps
   dconf:
     key: "/org/gnome/shell/favorite-apps"
-    value: "[\
-      'org.gnome.Terminal.desktop',\
-      'google-chrome.desktop',\
-      'firefox-esr.desktop',\
-      'org.gnome.gedit.desktop',\
-      'wireshark.desktop',\
-      'kali-burpsuite.desktop',\
-      'bitwarden.desktop',\
-      'obsidian.desktop',\
-      'code.desktop',\
-      'org.gnome.Nautilus.desktop']"
+    value: "['org.gnome.Terminal.desktop', 'google-chrome.desktop', 'firefox-esr.desktop', 'org.gnome.gedit.desktop', 'wireshark.desktop', 'kali-burpsuite.desktop', 'bitwarden.desktop', 'obsidian.desktop', 'code.desktop', 'org.gnome.Nautilus.desktop']"
   tags:
     - gnome
 
@@ -106,7 +96,7 @@
 - name: Set Dash to Dock background opacity
   dconf:
     key: "/org/gnome/shell/extensions/dash-to-dock/background-opacity"
-    value: "0.35"
+    value: "0.35000000000000003"
   tags:
     - gnome
 
@@ -220,10 +210,7 @@
 - name: Enable custom shortcuts
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
-    value: "[\
-      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/',\
-      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/',\
-      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']"
+    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']"
   tags:
     - gnome
 
