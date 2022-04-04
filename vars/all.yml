@@ -27,15 +27,6 @@ color:
     white:   '#abb2bf'
 
 #
-# Wallpaper
-#
-
-wallpaper:
-  url: https://github.com/hakbyte/wallpapers/raw/main/art/7f87f27ad29252ecfc0d_3641x2017.jpg
-  checksum: "sha1:7f87f27ad29252ecfc0dc17ae57b89273150e5b2"
-  dest: ~/.local/share/backgrounds
-
-#
 # Git
 #
 
