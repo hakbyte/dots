@@ -17,6 +17,7 @@
 - [ ] Zsh: make "" symbol from root prompt red
 - [ ] Increase default size of Gnome Terminal on Desktop
 - [ ] Use `https://github.com/repsac-by/gnome-shell-extension-quake-mode` + Tmux to simulate Tilix behavior?
+- [ ] Find way to programatically install Gnome extensions
 
 # Notes
 
