@@ -15,6 +15,7 @@
 - [ ] Add `.face` picture
 - [ ] Install emoji extension () and set its keybinding to "<Super>." (default is "<Super>e")
 - [ ] Zsh: make "" symbol from root prompt red
+- [ ] Increase default size of Gnome Terminal on Desktop
 
 # Notes
 
