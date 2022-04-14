@@ -14,6 +14,7 @@
 - [ ] Create startup service or script to set sound output device on Desktop. Alternatively, set it via `/etc/pulse/default.pa`
 - [ ] Add `.face` picture
 - [ ] Install emoji extension () and set its keybinding to "<Super>." (default is "<Super>e")
+- [ ] Zsh: make "" symbol from root prompt red
 
 # Notes
 
