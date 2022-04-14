@@ -13,6 +13,7 @@
 - [ ] Update homedirs role to only delete empty folders (see https://www.reddit.com/r/ansible/comments/k9aqfq/remove_empty_dirs/)
 - [ ] Create startup service or script to set sound output device on Desktop. Alternatively, set it via `/etc/pulse/default.pa`
 - [ ] Add `.face` picture
+- [ ] Install emoji extension () and set its keybinding to "<Super>." (default is "<Super>e")
 
 # Notes
 
