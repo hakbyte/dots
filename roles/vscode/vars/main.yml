@@ -4,6 +4,7 @@ extensions:
   - eamodio.gitlens
   - jebbs.markdown-extended
   - mushan.vscode-paste-image
+  - rust-lang.rust
   - stkb.rewrap
   - streetsidesoftware.code-spell-checker
   - tomoki1207.pdf
