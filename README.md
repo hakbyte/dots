@@ -18,6 +18,9 @@
 - [ ] Increase default size of Gnome Terminal on Desktop
 - [ ] Use `https://github.com/repsac-by/gnome-shell-extension-quake-mode` + Tmux to simulate Tilix behavior?
 - [ ] Find way to programatically install Gnome extensions
+- [ ] Change shortcuts to move between workspaces:
+  - [ ] <Super><Ctrl> + Right/Left: go to workpace
+  - [ ] <Super><Alt> + Right/Left: take focused app to workspace
 
 # Notes
 
