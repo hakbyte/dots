@@ -15,6 +15,9 @@ set -g history-limit 50000
 # Enable mouse (useful for scrolling up and down using the touchpad)
 set -g mouse on
 
+# Copy selected text to X11 clipboard
+set -s copy-command 'xclip -i -selection clipboard'
+
 # Remap prefix from 'C-b' to 'C-k'
 set -g prefix C-k
 bind-key C-k send-prefix
