@@ -16,6 +16,6 @@
 - name: Make Dash to Dock icons smaller
   dconf:
     key: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size"
-    value: "42"  # default is 48
+    value: "40"  # default is 48
   tags:
     - gnome
