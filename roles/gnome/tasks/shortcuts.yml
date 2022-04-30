@@ -1,0 +1,86 @@
+---
+
+#
+# Standard Shortcuts
+#
+
+- name: Set web browser shortcut
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/www"
+    value: "['<Super>w']"
+  tags:
+    - gnome
+
+- name: Set close window shortcut
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/close"
+    value: "['<Super>k']"
+  tags:
+    - gnome
+
+- name: Toggle fullscreen mode with Ctrl + \
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/toggle-fullscreen"
+    value: "['<Primary>backslash']"
+  tags:
+    - gnome
+
+- name: Use Ctrl+Super+Right to move window to next workspace
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-right"
+    value: "['<Primary><Super>Right']"
+  tags:
+    - gnome
+
+- name: Use Ctrl+Super+Left to move window to previous workspace
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left"
+    value: "['<Primary><Super>Left']"
+  tags:
+    - gnome
+
+#
+# Custom Shortcuts
+#
+
+- name: Create a custom shortcut for launching Flameshot
+  block:
+    - name: Create custom shortcut name
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name"
+        value: "'Flameshot'"
+    - name: Assign command to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command"
+        value: "'flameshot gui'"
+    - name: Assign key binding to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding"
+        value: "'<Super>Print'"
+  tags:
+    - gnome
+
+- name: Create custom shortcut for launching Nautilus
+  block:
+    - name: Create custom shortcut name
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name"
+        value: "'Nautilus'"
+    - name: Assign command to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command"
+        value: "'nautilus --new-window'"
+    - name: Assign key binding to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding"
+        value: "'<Super>f'"
+  tags:
+    - gnome
+
+# All of our custom shortcuts must be added to an array
+- name: Enable custom shortcuts
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
+    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+  tags:
+    - gnome
