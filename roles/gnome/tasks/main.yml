@@ -155,36 +155,19 @@
 # Custom Shortcuts
 #
 
-- name: Create custom shortcut for launching Tilix in Quake mode
-  block:
-    - name: Create custom shortcut name
-      dconf:
-        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name"
-        value: "'Tilix'"
-    - name: Assign command to custom shortcut
-      dconf:
-        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command"
-        value: "'tilix --quake'"
-    - name: Assign key binding to custom shortcut
-      dconf:
-        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding"
-        value: "'F12'"
-  tags:
-    - gnome
-
 - name: Create a custom shortcut for launching Flameshot
   block:
     - name: Create custom shortcut name
       dconf:
-        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name"
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name"
         value: "'Flameshot'"
     - name: Assign command to custom shortcut
       dconf:
-        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command"
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command"
         value: "'flameshot gui'"
     - name: Assign key binding to custom shortcut
       dconf:
-        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding"
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding"
         value: "'<Super>Print'"
   tags:
     - gnome
@@ -193,24 +176,24 @@
   block:
     - name: Create custom shortcut name
       dconf:
-        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name"
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name"
         value: "'Nautilus'"
     - name: Assign command to custom shortcut
       dconf:
-        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command"
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command"
         value: "'nautilus --new-window'"
     - name: Assign key binding to custom shortcut
       dconf:
-        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding"
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding"
         value: "'<Super>f'"
   tags:
     - gnome
 
-# All of your custom shortcuts must be added to an array
+# All of our custom shortcuts must be added to an array
 - name: Enable custom shortcuts
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
-    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']"
+    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
   tags:
     - gnome
 

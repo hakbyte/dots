@@ -12,7 +12,6 @@
     - role: tmux
     - role: neovim
     - role: gtk
-    - role: tilix
     - role: flameshot
     - role: gnome
     - role: homedirs
