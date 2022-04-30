@@ -77,10 +77,27 @@
   tags:
     - gnome
 
+- name: Create custom shortcut for launching Gnome Terminal
+  block:
+    - name: Create custom shortcut name
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name"
+        value: "'Gnome Terminal'"
+    - name: Assign command to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command"
+        value: "'gnome-terminal --window'"
+    - name: Assign key binding to custom shortcut
+      dconf:
+        key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding"
+        value: "'<Super>Return'"
+  tags:
+    - gnome
+
 # All of our custom shortcuts must be added to an array
 - name: Enable custom shortcuts
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
-    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']"
   tags:
     - gnome
