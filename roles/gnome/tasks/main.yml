@@ -111,6 +111,11 @@
   tags:
     - gnome
 
+- name: Configure Gnome Terminal
+  include_tasks: gnome_terminal.yml
+  tags:
+    - gnome
+
 - name: Add Laptop specific tasks
   include_tasks: laptop.yml
   when: target is defined and target == "laptop"
@@ -205,69 +210,5 @@
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
     value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
-  tags:
-    - gnome
-
-#
-# Gnome Terminal
-#
-
-- name: Set up Gnome terminal
-  block:
-    - name: Set terminal default size (columns)
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/default-size-columns"
-        value: 120
-
-    - name: Set terminal default size (rows)
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/default-size-rows"
-        value: 30
-
-    - name: Disable terminal bell
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/audible-bell"
-        value: "false"
-
-    - name: Hide scrollbar
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/scrollbar-policy"
-        value: "'never'"
-
-    - name: Enable custom font
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-system-font"
-        value: "false"
-
-    - name: Set custom font type and size
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/font"
-        value: "'JetBrains Mono 10'"
-
-    # Required so that we can set our own custom colors
-    - name: Disable theme colors
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors"
-        value: "false"
-
-    - name: Set background color
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-color"
-        value: "'{{ color.normal.black }}'"
-
-    - name: Set foreground color
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/foreground-color"
-        value: "'{{ color.normal.green }}'"
-
-    - name: Set background transparency
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-transparency-percent"
-        value: "10"
-
-    - name: Rename default profile
-      dconf:
-        key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/visible-name"
-        value: "'Hak'"
   tags:
     - gnome

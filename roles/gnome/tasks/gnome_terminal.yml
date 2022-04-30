@@ -1,0 +1,83 @@
+---
+
+#
+# Gnome Terminal
+#
+
+- name: Set terminal default size (columns)
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/default-size-columns"
+    value: 120
+  tags:
+    - gnome
+
+- name: Set terminal default size (rows)
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/default-size-rows"
+    value: 30
+  tags:
+    - gnome
+
+- name: Disable terminal bell
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/audible-bell"
+    value: "false"
+  tags:
+    - gnome
+
+- name: Hide scrollbar
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/scrollbar-policy"
+    value: "'never'"
+  tags:
+    - gnome
+
+- name: Enable custom font
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-system-font"
+    value: "false"
+  tags:
+    - gnome
+
+- name: Set custom font type and size
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/font"
+    value: "'JetBrains Mono 10'"
+  tags:
+    - gnome
+
+# Required so that we can set our own custom colors
+- name: Disable theme colors
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors"
+    value: "false"
+  tags:
+    - gnome
+
+- name: Set background color
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-color"
+    value: "'{{ color.normal.black }}'"
+  tags:
+    - gnome
+
+- name: Set foreground color
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/foreground-color"
+    value: "'{{ color.normal.green }}'"
+  tags:
+    - gnome
+
+- name: Set background transparency
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-transparency-percent"
+    value: "10"
+  tags:
+    - gnome
+
+- name: Rename default profile
+  dconf:
+    key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/visible-name"
+    value: "'Hak'"
+  tags:
+    - gnome
