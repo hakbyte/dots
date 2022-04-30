@@ -90,24 +90,8 @@
   tags:
     - gnome
 
-- name: Set Dash to Dock background color
-  dconf:
-    key: "/org/gnome/shell/extensions/dash-to-dock/background-color"
-    value: "'{{ color.bg }}'"
-  tags:
-    - gnome
-
-- name: Set Dash to Dock transparency mode to 'FIXED'
-  dconf:
-    key: "/org/gnome/shell/extensions/dash-to-dock/transparency-mode"
-    value: "'FIXED'"
-  tags:
-    - gnome
-
-- name: Set Dash to Dock background opacity
-  dconf:
-    key: "/org/gnome/shell/extensions/dash-to-dock/background-opacity"
-    value: "0.35000000000000003"
+- name: Configure shortcuts
+  include_tasks: shortcuts.yml
   tags:
     - gnome
 
@@ -116,8 +100,8 @@
   tags:
     - gnome
 
-- name: Configure shortcuts
-  include_tasks: shortcuts.yml
+- name: Configure Dash to Dock
+  include_tasks: dock.yml
   tags:
     - gnome
 
@@ -132,4 +116,3 @@
   when: target is defined and target == "desktop"
   tags:
     - gnome
-
