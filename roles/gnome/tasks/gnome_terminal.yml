@@ -7,14 +7,14 @@
 - name: Set terminal default size (columns)
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/default-size-columns"
-    value: 120
+    value: "{{ gnome_terminal_columns }}"
   tags:
     - gnome
 
 - name: Set terminal default size (rows)
   dconf:
     key: "/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/default-size-rows"
-    value: 30
+    value: "{{ gnome_terminal_rows }}"
   tags:
     - gnome
 
