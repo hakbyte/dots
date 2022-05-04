@@ -253,6 +253,15 @@ fi
 # Misc
 #
 
+# Function to change the terminal title in Gnome Terminal
+precmd () {
+    print -Pn "\e]0;$TITLE\a"
+}
+
+tt() {
+    export TITLE="$*"
+}
+
 # Load aliases
 if [ -f ~/.aliases ]; then
     source ~/.aliases
