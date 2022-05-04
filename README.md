@@ -21,6 +21,7 @@
 - [ ] Change shortcuts to move between workspaces:
   - [ ] <Super><Ctrl> + Right/Left: go to workpace
   - [ ] <Super><Alt> + Right/Left: take focused app to workspace
+- [ ] Fix issue with `vim-fugitive` (maybe switch back to vim?)
 
 # Notes
 
