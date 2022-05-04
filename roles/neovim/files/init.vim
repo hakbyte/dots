@@ -18,6 +18,7 @@ set undofile
 set title
 set nowrap
 set titlestring=%t
+let g:python3_host_prog = '/usr/bin/python'
 
 " Let vim jump to the last position when reopening a file
 if has("autocmd")
