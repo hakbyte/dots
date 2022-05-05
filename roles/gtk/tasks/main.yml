@@ -14,3 +14,11 @@
     mode: '600'
   tags:
     - gtk
+
+- name: Push GTK bookmarks file
+  template:
+    src: bookmarks.j2
+    dest: ~/.config/gtk-3.0/bookmarks
+    mode: '600'
+  tags:
+    - gtk

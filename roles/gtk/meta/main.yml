@@ -7,3 +7,5 @@ galaxy_info:
     - name: Linux
       versions:
         - all
+dependencies:
+  - role: homedirs
