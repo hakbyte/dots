@@ -18,7 +18,7 @@ alias lr="/usr/bin/ls -lhAR --color=auto"
 alias ls="/usr/bin/ls --color=auto"
 alias lt="/usr/bin/ls -lhArt --color=auto"
 alias sui="/usr/bin/sudo -i"
-alias v="/usr/bin/nvim"
+alias v="/usr/bin/vim"
 
 # Use grc to colorize output of some programs
 if [ -x /usr/bin/grc ]; then
