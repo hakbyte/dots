@@ -33,6 +33,7 @@ color:
 git:
   name: hakbyte
   email: hakbyte@users.noreply.github.com
+  editor: vim
 
 #
 # GTK
