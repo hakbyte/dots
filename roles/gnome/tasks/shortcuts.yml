@@ -18,10 +18,10 @@
   tags:
     - gnome
 
-- name: Toggle fullscreen mode with Ctrl + \
+- name: Toggle fullscreen mode with Super + \
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/toggle-fullscreen"
-    value: "['<Primary>backslash']"
+    value: "['<Super>backslash']"
   tags:
     - gnome
 
