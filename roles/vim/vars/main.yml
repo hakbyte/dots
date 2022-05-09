@@ -1,0 +1,11 @@
+---
+plugins:
+  - https://github.com/airblade/vim-gitgutter
+  - https://github.com/cohama/lexima.vim
+  - https://github.com/joshdick/onedark.vim
+  - https://github.com/junegunn/fzf
+  - https://github.com/junegunn/fzf.vim
+  - https://github.com/sheerun/vim-polyglot
+  - https://github.com/tpope/vim-commentary
+  - https://github.com/tpope/vim-fugitive
+  - https://github.com/vim-airline/vim-airline

@@ -1,0 +1,28 @@
+---
+- name: Create Vim directory structure
+  file:
+    path: ~/.vim/{{ item }}
+    state: directory
+    mode: '700'
+  loop:
+    - undo
+    - pack/plugins/opt
+  tags:
+    - vim
+
+- name: Install Vim plugins
+  git:
+    repo: "{{ item }}"
+    dest: ~/.vim/pack/plugins/opt/{{ item | basename }}
+    depth: 1
+  loop: "{{ plugins }}"
+  tags:
+    - vim
+
+- name: Push Vim config file
+  template:
+    src: vimrc.j2
+    dest: ~/.vimrc
+    mode: '600'
+  tags:
+    - vim
