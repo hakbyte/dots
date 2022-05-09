@@ -11,6 +11,7 @@
     - role: git
     - role: tmux
     - role: neovim
+    - role: vim
     - role: gtk
     - role: flameshot
     - role: gnome
