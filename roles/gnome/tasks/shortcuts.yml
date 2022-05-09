@@ -25,6 +25,20 @@
   tags:
     - gnome
 
+- name: Use Ctrl+Super+Right to switch to workspace to the right
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-left"
+    value: "['<Primary><Super>Left']"
+  tags:
+    - gnome
+
+- name: Use Ctrl+Super+Right to move window to workspace to the right
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-right"
+    value: "['<Primary><Super>Right']"
+  tags:
+    - gnome
+
 - name: Use Ctrl+Alt+Right to move window to workspace to the right
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-right"
