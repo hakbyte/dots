@@ -40,6 +40,7 @@ set updatetime=100
 
 " vim-floaterm settings
 let g:floaterm_title = ""
+let g:floaterm_width = 0.85
 let g:floaterm_keymap_toggle = '<F12>'
 
 "
@@ -95,8 +96,8 @@ map <silent> <leader>/ :noh<cr>
 " Pressing <leader>s will toggle spell checking
 map <leader>s :setlocal spell!<cr>
 
-" Gives us the hability to quickly insert empty lines without leaving normal mode
-map <silent> <C-Up> :call AddBlankUp()<cr>
+" Gives us the ability to quickly insert empty lines without leaving normal mode
+map <silent> <C-Up>   :call AddBlankUp()<cr>
 map <silent> <C-Down> :call AddBlankDown()<cr>
 
 " Double pressing space will bring fzf
@@ -106,30 +107,28 @@ nnoremap <silent> <Leader><Space> :Files<cr>
 nnoremap <silent> <Leader>. :Files <C-r>=expand("%:h")<cr>/<cr>
 
 " User arrow keys to manipulate tabs
-map <silent> <C-Left> <Esc>:tabprev<cr>
-map <silent> <C-Right> <Esc>:tabnext<cr>
-nnoremap <silent> <C-S-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<cr>
+map <silent> <C-Left> <Esc>   :tabprev<cr>
+map <silent> <C-Right> <Esc>  :tabnext<cr>
+nnoremap <silent> <C-S-Left>  :execute 'silent! tabmove ' . (tabpagenr()-2)<cr>
 nnoremap <silent> <C-S-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<cr>
 
-" Better way to move among windows
+" Better way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Copy to clipboard
+" Copy and paste using system clipboard
 vnoremap <leader>y  "+y
 nnoremap <leader>Y  "+yg_
 nnoremap <leader>y  "+y
 nnoremap <leader>yy "+yy
+nnoremap <leader>p  "+p
+nnoremap <leader>P  "+P
+vnoremap <leader>p  "+p
+vnoremap <leader>P  "+P
 
-" Paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
-
-" Vim-fugitive
+" vim-fugitive
 map <silent> <leader>g0  :Gdiff :0<cr>
 map <silent> <leader>g1  :Gdiff !~1<cr>
 map <silent> <leader>gc  :Gwrite<cr>:Git commit -v<cr>
