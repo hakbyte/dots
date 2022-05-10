@@ -1,31 +1,15 @@
 # TODO
 
-- [x] Flameshot
 - [ ] Pyenv
-- [ ] Zsh
-- [x] Tmux
-- [x] Homedirs: how to deal with defaults in Files app?
-- [x] Tilix (including shortcuts + apperance -- all via dconf)
-- [ ] GTK: shrink titlebars (see eog app)?
-- [x] Also change appearance of gnome terminal (default from Kali with Gnome DE)
-- [ ] Add shortcut to launch a regular terminal (maybe Tilix, maybe Gnome terminal)
-- [ ] Find out how to customize Nautilus folder's under "Recent"
 - [ ] Update homedirs role to only delete empty folders (see https://www.reddit.com/r/ansible/comments/k9aqfq/remove_empty_dirs/)
 - [ ] Create startup service or script to set sound output device on Desktop. Alternatively, set it via `/etc/pulse/default.pa`
 - [ ] Add `.face` picture
 - [ ] Install emoji extension () and set its keybinding to "<Super>." (default is "<Super>e")
 - [ ] Zsh: make "" symbol from root prompt red
-- [ ] Increase default size of Gnome Terminal on Desktop
-- [ ] Use `https://github.com/repsac-by/gnome-shell-extension-quake-mode` + Tmux to simulate Tilix behavior?
 - [ ] Find way to programatically install Gnome extensions
-- [ ] Change shortcuts to move between workspaces:
-  - [ ] <Super><Ctrl> + Right/Left: go to workpace
-  - [ ] <Super><Alt> + Right/Left: take focused app to workspace
-- [ ] Fix issue with `vim-fugitive` (maybe switch back to vim?)
 
 # Notes
 
-- Remove background color of Neovim theme? May look better on Tilix
 - Working with dconf commands:
   - Dump contents: `dconf dump /com/gexperts/Tilix/`
   - Clean up database for Tilix: `dconf list /com/gexperts/Tilix/ | xargs -I {} dconf reset -f "/com/gexperts/Tilix/"{}`
