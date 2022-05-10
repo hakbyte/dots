@@ -32,6 +32,12 @@ endif
 packadd! {{ item | basename }}
 {% endfor %}
 
+" vim-gitgutter settings
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '-'
+set updatetime=100
+
 " vim-floaterm settings
 let g:floaterm_title = ""
 let g:floaterm_keymap_toggle = '<F12>'
@@ -143,19 +149,6 @@ map <silent> <leader>gst :Git status<cr>
 map <silent> <leader>gw  :Gwrite<cr>
 
 "
-" Misc
-"
-
-" Delete trailing whitespace on save
-autocmd BufWritePre * :call TrimWhiteSpace()
-
-" Git gutter config
-let g:gitgutter_sign_added = '+'
-let g:gitgutter_sign_modified = '~'
-let g:gitgutter_sign_removed = '-'
-set updatetime=100
-
-"
 " Functions & Macros
 "
 
@@ -171,9 +164,10 @@ function! AddBlankDown()
     call winrestview(l:save)
 endfun
 
-" Delete trailing whitespace
+" Delete trailing whitespace on save
 fun! TrimWhiteSpace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
+autocmd BufWritePre * :call TrimWhiteSpace()
