@@ -192,7 +192,7 @@ function! ToggleTerm(height)
         try
             exec "buffer " . g:term_buf
         catch
-            call termopen($SHELL, {"detach": 0})
+            call term_start($SHELL, {"curwin": 1})
             let g:term_buf = bufnr("")
             set nonumber
             set norelativenumber
