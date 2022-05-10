@@ -9,3 +9,4 @@ plugins:
   - https://github.com/tpope/vim-commentary
   - https://github.com/tpope/vim-fugitive
   - https://github.com/vim-airline/vim-airline
+  - https://github.com/voldikss/vim-floaterm

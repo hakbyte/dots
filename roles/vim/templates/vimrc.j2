@@ -32,6 +32,10 @@ endif
 packadd! {{ item | basename }}
 {% endfor %}
 
+" vim-floaterm settings
+let g:floaterm_title = ""
+let g:floaterm_keymap_toggle = '<F12>'
+
 "
 " Appearance
 "
@@ -88,11 +92,6 @@ map <leader>s :setlocal spell!<cr>
 " Gives us the hability to quickly insert empty lines without leaving normal mode
 map <silent> <C-Up> :call AddBlankUp()<cr>
 map <silent> <C-Down> :call AddBlankDown()<cr>
-
-" Toggle terminal
-let termheight = 15
-nnoremap <silent> <leader>t :call ToggleTerm(termheight)<cr>
-tnoremap <silent> <leader>t <C-\><C-n>:call ToggleTerm(termheight)<cr>
 
 " Double pressing space will bring fzf
 nnoremap <silent> <Leader><Space> :Files<cr>
@@ -178,27 +177,3 @@ fun! TrimWhiteSpace()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
-
-" Open a terminal and place it at the bottom of the screen.
-" See https://stackoverflow.com/questions/37232418/toggle-neovim-terminal-buffer-like-nerdtree-plugin
-let g:term_buf = 0
-let g:term_win = 0
-function! ToggleTerm(height)
-    if win_gotoid(g:term_win)
-        hide
-    else
-        botright new
-        exec "resize " . a:height
-        try
-            exec "buffer " . g:term_buf
-        catch
-            call term_start($SHELL, {"curwin": 1})
-            let g:term_buf = bufnr("")
-            set nonumber
-            set norelativenumber
-            set signcolumn=no
-        endtry
-        startinsert!
-        let g:term_win = win_getid()
-    endif
-endfunction
