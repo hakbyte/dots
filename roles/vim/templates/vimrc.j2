@@ -105,21 +105,11 @@ nnoremap <silent> <Leader><Space> :Files<cr>
 " Launch fzf just for the directory containing the currently edited file
 nnoremap <silent> <Leader>. :Files <C-r>=expand("%:h")<cr>/<cr>
 
-" Move a line of text using Alt+[jk]
-nmap <silent> <M-j> mz:m+<cr>`z
-nmap <silent> <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
 " User arrow keys to manipulate tabs
 map <silent> <C-Left> <Esc>:tabprev<cr>
 map <silent> <C-Right> <Esc>:tabnext<cr>
 nnoremap <silent> <C-S-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<cr>
 nnoremap <silent> <C-S-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<cr>
-
-" Other useful mappings for managing tabs
-map <silent> <leader>tn :tabnew<cr>
-map <silent> <leader>tc :tabclose<cr>
 
 " Better way to move among windows
 map <C-j> <C-W>j
