@@ -1,0 +1,16 @@
+---
+- name: Create SSH config folder
+  file:
+    path: ~/.ssh
+    state: directory
+    mode: '700'
+  tags:
+    - ssh
+
+- name: Push SSH config file
+  copy:
+    src: config
+    dest: ~/.ssh/config
+    mode: '600'
+  tags:
+    - ssh

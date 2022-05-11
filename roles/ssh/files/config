@@ -1,0 +1,6 @@
+Host *
+    # Keep connection alive by contacting the host every 60 seconds
+    ServerAliveInterval 60
+
+    # Automatically add keys to ssh-agent
+    AddKeysToAgent  yes
