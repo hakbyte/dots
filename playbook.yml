@@ -7,6 +7,7 @@
   pre_tasks:
     - import_tasks: tasks/pretasks.yml
   roles:
+    - role: ssh
     - role: zsh
     - role: git
     - role: tmux
