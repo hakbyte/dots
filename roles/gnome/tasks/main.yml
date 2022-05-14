@@ -6,8 +6,7 @@
 # Settings
 #
 
-- name: Set wallpaper
-  block:
+- block:
   - name: Set path to wallpaper
     set_fact:
       wallpaper_path: "'file:///usr/share/backgrounds/hak/art/7f87f27ad29252ecfc0d_3641x2017.jpg'"
