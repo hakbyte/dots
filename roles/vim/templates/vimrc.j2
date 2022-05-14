@@ -103,9 +103,6 @@ map <silent> <C-Down> :call AddBlankDown()<cr>
 " Double pressing space will bring fzf
 nnoremap <silent> <Leader><Space> :Files<cr>
 
-" Launch fzf just for the directory containing the currently edited file
-nnoremap <silent> <Leader>. :Files <C-r>=expand("%:h")<cr>/<cr>
-
 " User arrow keys to manipulate tabs
 map <silent> <C-Left> <Esc>   :tabprev<cr>
 map <silent> <C-Right> <Esc>  :tabnext<cr>
