@@ -25,9 +25,9 @@
 
 - name: Set wallpaper
   block:
-  - name: Set wallpaper path
+  - name: Set path to wallpaper
     set_fact:
-      wallpaper_path: "'file:///{{ wallpaper.dest | expanduser }}/{{ wallpaper.url | basename }}'"
+      wallpaper_path: "'file:///usr/share/backgrounds/hak/art/7f87f27ad29252ecfc0d_3641x2017.jpg'"
 
   - name: Set wallpaper for Light Theme
     dconf:
