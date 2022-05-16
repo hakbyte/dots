@@ -7,6 +7,7 @@
 - [ ] Install emoji extension () and set its keybinding to "<Super>." (default is "<Super>e")
 - [ ] Zsh: make "" symbol from root prompt red
 - [ ] Find way to programatically install Gnome extensions
+- [ ] Configure Go path
 
 # Notes
 
