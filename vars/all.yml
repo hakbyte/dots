@@ -41,3 +41,10 @@ git:
 
 gtk:
   terminal_padding: 10
+
+#
+# Gnome
+#
+
+gnome:
+  wallpaper: /usr/share/backgrounds/hak/art/7f87f27ad29252ecfc0d_3641x2017.jpg
