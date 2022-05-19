@@ -8,6 +8,7 @@
 - [ ] Zsh: make "" symbol from root prompt red
 - [ ] Find way to programatically install Gnome extensions
 - [ ] Configure Go path
+- [ ] Configure Zathura
 
 # Notes
 
