@@ -7,3 +7,11 @@
   with_fileglob: 'files/user-dirs.*'
   tags:
     - xdg
+
+- name: Push MIME applications list
+  copy:
+    src: mimeapps.list
+    dest: ~/.config/mimeapps.list
+    mode: '600'
+  tags:
+    - xdg
