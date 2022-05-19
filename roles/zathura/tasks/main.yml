@@ -1,0 +1,16 @@
+---
+- name: Create Zathura config directory
+  file:
+    path: ~/.config/zathura
+    state: directory
+    mode: '700'
+  tags:
+    - zathura
+
+- name: Push Zathura config file
+  template:
+    src: zathurarc.j2
+    dest: ~/.config/zathura/zathurarc
+    mode: '600'
+  tags:
+    - zathura
