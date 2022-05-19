@@ -1,0 +1,28 @@
+---
+
+#
+# Gnome Shell extensions
+#
+
+- name: Download extensions
+  get_url:
+    url: "{{ item }}"
+    dest: "/tmp"
+  loop: "{{ gnome.extensions }}"
+  tags:
+    - gnome
+
+- name: Install extensions
+  command:
+    cmd: gnome-extensions install "/tmp/{{ item | basename }}"
+  loop: "{{ gnome.extensions }}"
+  tags:
+    - gnome
+
+# FIXME: enable extension, however the task below fails unless Gnome Shell is restarted.
+# - name: Enable extensions
+#   command:
+#     cmd: gnome-extensions enable "{{ item | basename | splitext | first }}"
+#   loop: "{{ gnome.extensions }}"
+#   tags:
+#     - gnome

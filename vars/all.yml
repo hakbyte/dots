@@ -48,3 +48,5 @@ gtk:
 
 gnome:
   wallpaper: /usr/share/backgrounds/hak/art/7f87f27ad29252ecfc0d_3641x2017.jpg
+  extensions:
+    - https://github.com/maoschanz/emoji-selector-for-gnome/releases/download/20/emoji-selector@maestroschan.fr.zip

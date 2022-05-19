@@ -87,6 +87,11 @@
   tags:
     - gnome
 
+- name: Install Gnome Shell extensions
+  include_tasks: extensions.yml
+  tags:
+    - gnome
+
 - name: Add Laptop specific tasks
   include_tasks: laptop.yml
   when: target is defined and target == "laptop"
