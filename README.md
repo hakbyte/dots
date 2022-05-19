@@ -1,23 +1,41 @@
+# Dotfiles
+
+My Kali Linux dotfiles, powered by [Ansible](https://www.ansible.com/).
+Compared to other solutions I previously used to manage configuration files,
+Ansible is way more flexible at the cost of some complexity :)
+
+Before running this playbook, install the dependencies:
+
+```txt
+sudo apt install ansible python3-psutil
+```
+
+# Usage
+
+> :warning: Don't blindly run the playbook or your configuration files will
+> be overwritten! If you're new to Ansible, run the playbooks in a VM and copy
+> the tidbits that interest you. Otherwise spend some time to learn how
+> everything fits together and adapt it to your environment.
+
+```
+$ git clone https://github.com/hakbyte/dots
+$ cd dots
+$ ansible-playbook -i hosts playbook.yml -e target=<TARGET>
+```
+
+> :memo: Possible targets are either `desktop` or `laptop`. The former is fine
+> tuned for a smaller screen (1920x1080 pixels) besides configuring the
+> touchpad.
+
+# Customization
+
+You should check both `vars/all.yml` and `vars/pretasks.yml` for ways of customizing
+your setup.
+
 # TODO
 
-- [ ] Pyenv
 - [ ] Update homedirs role to only delete empty folders (see https://www.reddit.com/r/ansible/comments/k9aqfq/remove_empty_dirs/)
-- [ ] Create startup service or script to set sound output device on Desktop. Alternatively, set it via `/etc/pulse/default.pa`
-- [ ] Add `.face` picture
-- [ ] Install emoji extension () and set its keybinding to "<Super>." (default is "<Super>e")
-- [ ] Zsh: make "" symbol from root prompt red
-- [ ] Find way to programatically install Gnome extensions
-- [ ] Configure Go path
-- [ ] Configure Zathura
-
-# Notes
-
-- Working with dconf commands:
-  - Dump contents: `dconf dump /com/gexperts/Tilix/`
-  - Clean up database for Tilix: `dconf list /com/gexperts/Tilix/ | xargs -I {} dconf reset -f "/com/gexperts/Tilix/"{}`
-  - Watch for any changes: `dconf watch /` also `dconf watch /com/gexperts/Tilix/`
-- Sound issue:
-  - https://askubuntu.com/questions/1038490/how-do-you-set-a-default-audio-output-device-in-ubuntu/1207638#1207638
-  - Commands:
-    - pactl list short sinks                                                                                                          1 ⨯
-    - pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo-extra2
+- [ ] Change `.face` picture
+- [ ] Install [Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
+- [ ] Change Zsh's root prompt to red
+- [ ] Add screenshot of current configuration
