@@ -7,15 +7,15 @@
   pre_tasks:
     - import_tasks: tasks/pretasks.yml
   roles:
-    - role: ssh
-    - role: zsh
-    - role: git
-    - role: tmux
-    - role: vim
-    - role: gtk
-    - role: flameshot
-    - role: gnome
     - role: homedirs
     - role: xdg
-    - role: vscode
+    - role: git
+    - role: ssh
+    - role: zsh
+    - role: vim
+    - role: tmux
+    - role: flameshot
     - role: zathura
+    - role: gtk
+    - role: gnome
+    - role: vscode
