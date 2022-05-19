@@ -9,17 +9,17 @@
 - block:
   - name: Set path to wallpaper
     set_fact:
-      wallpaper_path: "'file://{{ gnome.wallpaper }}'"
+      wallpaper: "'file://{{ gnome.wallpaper }}'"
 
   - name: Set wallpaper for Light Theme
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
-      value: "{{ wallpaper_path}}"
+      value: "{{ wallpaper }}"
 
   - name: Set wallpaper for Dark Theme
     dconf:
       key: "/org/gnome/desktop/background/picture-uri-dark"
-      value: "{{ wallpaper_path}}"
+      value: "{{ wallpaper }}"
   tags:
     - gnome
 
