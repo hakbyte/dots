@@ -1,9 +1,9 @@
 ---
-- name: Push XDG config files
+- name: Push XDG's user-dirs config files
   copy:
     src: "{{ item }}"
     dest: ~/.config
     mode: '600'
-  with_fileglob: 'files/*'
+  with_fileglob: 'files/user-dirs.*'
   tags:
     - xdg
