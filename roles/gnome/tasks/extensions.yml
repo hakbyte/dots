@@ -14,7 +14,7 @@
 
 - name: Install extensions
   command:
-    cmd: gnome-extensions install "/tmp/{{ item | basename }}"
+    cmd: gnome-extensions install --force "/tmp/{{ item | basename }}"
   loop: "{{ gnome.extensions }}"
   tags:
     - gnome
