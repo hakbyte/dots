@@ -18,6 +18,7 @@ alias lr="/usr/bin/ls -lhAR --color=auto"
 alias ls="/usr/bin/ls --color=auto"
 alias lt="/usr/bin/ls -lhArt --color=auto"
 alias sui="/usr/bin/sudo -i"
+alias sudo="/usr/bin/sudo "
 alias v="/usr/bin/vim"
 
 # Use grc to colorize output of some programs
