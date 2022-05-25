@@ -57,3 +57,11 @@ alias gsd="/usr/bin/git switch dev"
 alias gsm="/usr/bin/git switch main"
 alias gss="/usr/bin/git status -s"
 alias gst="/usr/bin/git status"
+
+#
+# CTF
+#
+
+alias cme='/usr/bin/crackmapexec'
+httpsrv() { python -m http.server ${1:-80} -d ${2:-.} }
+smbsrv() { impacket-smbserver ${1:-share} -d ${2:-.} }
