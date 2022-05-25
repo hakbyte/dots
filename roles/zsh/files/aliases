@@ -4,59 +4,59 @@
 
 # Basic commands
 
-alias -- -="cd -"
-alias ...="cd ../.."
-alias bc="/usr/bin/bc -l"
-alias diff="/usr/bin/diff --color=auto"
-alias feh="feh --scale-down --auto-zoom --image-bg black"
-alias grep="/usr/bin/grep --color=always"
-alias h="/usr/bin/htop -M"
-alias ks="kill -9 $$"
-alias l="/usr/bin/ls -lh --color=auto"
-alias la="/usr/bin/ls -lhA --color=auto"
-alias lr="/usr/bin/ls -lhAR --color=auto"
-alias ls="/usr/bin/ls --color=auto"
-alias lt="/usr/bin/ls -lhArt --color=auto"
-alias sui="/usr/bin/sudo -i"
-alias sudo="/usr/bin/sudo "
-alias v="/usr/bin/vim"
+alias -- -='cd -'
+alias ...='cd ../..'
+alias bc='/usr/bin/bc -l'
+alias diff='/usr/bin/diff --color=auto'
+alias feh='feh --scale-down --auto-zoom --image-bg black'
+alias grep='/usr/bin/grep --color=always'
+alias h='/usr/bin/htop -M'
+alias ks='kill -9 $$'
+alias l='/usr/bin/ls -lh --color=auto'
+alias la='/usr/bin/ls -lhA --color=auto'
+alias lr='/usr/bin/ls -lhAR --color=auto'
+alias ls='/usr/bin/ls --color=auto'
+alias lt='/usr/bin/ls -lhArt --color=auto'
+alias sui='/usr/bin/sudo -i'
+alias sudo='/usr/bin/sudo '
+alias v='/usr/bin/vim'
 
 # Use grc to colorize output of some programs
 if [ -x /usr/bin/grc ]; then
-    alias df="/usr/bin/grc df"
-    alias ip="/usr/bin/grc ip"
-    alias netstat="/usr/bin/grc netstat"
-    alias nmap="/usr/bin/grc nmap"
-    alias ping="/usr/bin/grc ping"
-    alias ps="/usr/bin/grc ps"
-    alias ss="/usr/bin/grc ss"
+    alias df='/usr/bin/grc df'
+    alias ip='/usr/bin/grc ip'
+    alias netstat='/usr/bin/grc netstat'
+    alias nmap='/usr/bin/grc nmap'
+    alias ping='/usr/bin/grc ping'
+    alias ps='/usr/bin/grc ps'
+    alias ss='/usr/bin/grc ss'
 fi
 
 # Tmux
 
-alias t="/usr/bin/tmux new -As hak"
-alias tls="/usr/bin/tmux ls"
-tn() { /usr/bin/tmux new -As "${1:-hak}"; }          # create new session (defaults to `hak`)
-ta() { /usr/bin/tmux attach -t "${1:-hak}"; }        # attatch to session (defaults to `hak`)
-tk() { /usr/bin/tmux kill-session -t "${1:-hak}"; }  # kill session (defaults to `hak`)
+alias t='/usr/bin/tmux new -As hak'
+alias tls='/usr/bin/tmux ls'
+tn() { /usr/bin/tmux new -As ${1:-hak} }          # create new session (defaults to `hak`)
+ta() { /usr/bin/tmux attach -t ${1:-hak} }        # attatch to session (defaults to `hak`)
+tk() { /usr/bin/tmux kill-session -t ${1:-hak} }  # kill session (defaults to `hak`)
 
 # Git
 
-alias g="/usr/bin/git"
-alias ga="/usr/bin/git add"
-alias gaa="/usr/bin/git add --all"
-alias gc="/usr/bin/git commit -v"
-alias gf="/usr/bin/git fetch"
-alias gl="/usr/bin/git pull"
-alias glg="/usr/bin/git log --oneline --decorate --graph"
-alias glp="/usr/bin/git log -p"
-alias gp="/usr/bin/git push"
-alias gpf="/usr/bin/git push --force"
-alias grs="/usr/bin/git restore --staged"
-alias gsd="/usr/bin/git switch dev"
-alias gsm="/usr/bin/git switch main"
-alias gss="/usr/bin/git status -s"
-alias gst="/usr/bin/git status"
+alias g='/usr/bin/git'
+alias ga='/usr/bin/git add'
+alias gaa='/usr/bin/git add --all'
+alias gc='/usr/bin/git commit -v'
+alias gf='/usr/bin/git fetch'
+alias gl='/usr/bin/git pull'
+alias glg='/usr/bin/git log --oneline --decorate --graph'
+alias glp='/usr/bin/git log -p'
+alias gp='/usr/bin/git push'
+alias gpf='/usr/bin/git push --force'
+alias grs='/usr/bin/git restore --staged'
+alias gsd='/usr/bin/git switch dev'
+alias gsm='/usr/bin/git switch main'
+alias gss='/usr/bin/git status -s'
+alias gst='/usr/bin/git status'
 
 #
 # CTF
