@@ -39,3 +39,4 @@ this setup.
 - [ ] Install [Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
 - [ ] Change Zsh's root prompt to red
 - [ ] Add screenshot of current configuration
+- [ ] Fix missing glyph in vim-airline
