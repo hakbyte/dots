@@ -2,7 +2,7 @@
 
 My Kali Linux dotfiles, powered by [Ansible](https://www.ansible.com/).
 Compared to other solutions I previously used to manage configuration files,
-Ansible is way more flexible at the cost of some complexity :)
+Ansible is way more flexible at the cost of _some_ complexity :)
 
 Before running this playbook, install the dependencies:
 
@@ -18,19 +18,19 @@ sudo apt install ansible python3-psutil
 > everything fits together and adapt it to your environment.
 
 ```
-$ git clone https://github.com/hakbyte/dots
+$ git clone https://github.com/hakbyte/dots.git
 $ cd dots
 $ ansible-playbook -i hosts playbook.yml -e target=<TARGET>
 ```
 
-> :memo: Possible targets are either `desktop` or `laptop`. The former is fine
-> tuned for a smaller screen (1920x1080 pixels) besides configuring the
+> :memo: Possible values for `<TARGET>` are `desktop` or `laptop`. The former
+> is fine tuned for a smaller screen (1920x1080 pixels) besides configuring the
 > touchpad.
 
 # Customization
 
 You should check both `vars/all.yml` and `vars/pretasks.yml` for ways of customizing
-your setup.
+this setup.
 
 # TODO
 
