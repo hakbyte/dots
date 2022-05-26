@@ -4,6 +4,10 @@ My Kali Linux dotfiles, powered by [Ansible](https://www.ansible.com/).
 Compared to other solutions I previously used to manage configuration files,
 Ansible is way more flexible at the cost of _some_ complexity :)
 
+So how does it look like? See below:
+
+![](.assets/sample.jpg)
+
 Before running this playbook, install the dependencies:
 
 ```txt
