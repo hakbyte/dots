@@ -59,3 +59,4 @@ setup.
 - [ ] Change Zsh's root prompt to red
 - [x] Add screenshot of current configuration
 - [ ] Fix missing glyph in vim-airline
+- [ ] Add *Features* section to `README.md`
