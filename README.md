@@ -1,8 +1,8 @@
 # Dotfiles
 
 My Kali Linux dotfiles, powered by [Ansible](https://www.ansible.com/). Compared
-to other solutions I previously used to manage dotfiles files, Ansible is way
-more flexible at the cost of *some* complexity ;)
+to other solutions I previously used to manage dotfiles, Ansible is way more
+flexible at the cost of *some* complexity ;)
 
 So how does it look like?
 
@@ -11,7 +11,7 @@ So how does it look like?
 # Usage
 
 > :warning: **Important:**
-> - To achieve similar results, install [Kali](https://www.kali.org/) Linux
+> - To achieve similar results, install [Kali Linux](https://www.kali.org/)
 > 2022.2 with Gnome as the Desktop Environment
 > - Don't blindly run this playbook or your configuration files will be
 > overwritten! If you're new to Ansible, run the playbook in a VM and copy the
