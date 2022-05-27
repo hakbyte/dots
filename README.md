@@ -4,6 +4,9 @@ My Kali Linux dotfiles, powered by [Ansible](https://www.ansible.com/). Compared
 to other solutions I previously used to manage dotfiles, Ansible is way more
 flexible at the cost of *some* complexity ;)
 
+> :memo: You may also want to check out my other [Ansible playbook](https://github.com/hakbyte/flame)
+> for setting up Kali Linux. They are intended to complement each other.
+
 So how does it look like?
 
 ![](.assets/sample.jpg)
