@@ -12,6 +12,7 @@
   tags:
     - gnome
 
+# FIXME: check if extension is already installed
 - name: Install extensions
   command:
     cmd: gnome-extensions install --force "/tmp/{{ item | basename }}"
