@@ -1,10 +1,7 @@
 ---
 extensions:
-  - bierner.emojisense
   - eamodio.gitlens
   - golang.Go
-  - jebbs.markdown-extended
-  - mushan.vscode-paste-image
   - rust-lang.rust
   - stkb.rewrap
   - streetsidesoftware.code-spell-checker
