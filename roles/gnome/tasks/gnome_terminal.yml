@@ -21,7 +21,7 @@
   include_tasks: gnome_terminal_settings.yml
   vars:
     profile:
-      name: "Alternate"
+      name: "Solid"
       id: "{{ alternate_terminal_profile_id }}"
       transparency: 0
   tags:
