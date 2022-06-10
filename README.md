@@ -63,3 +63,5 @@ setup.
 - [x] Add screenshot of current configuration
 - [ ] Fix missing glyph in vim-airline
 - [ ] Add *Features* section to `README.md`
+- [ ] Fix: vim colors don't work inside Tmux
+- [ ] Create GitHub issues for every TODO item
