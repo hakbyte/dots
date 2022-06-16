@@ -11,5 +11,6 @@ extensions:
   - streetsidesoftware.code-spell-checker
   - tomoki1207.pdf
   - vscode-icons-team.vscode-icons
+  - vscode-nested-tags.vscode-nested-tags
   - yzhang.markdown-all-in-one
   - zhuangtongfa.material-theme
