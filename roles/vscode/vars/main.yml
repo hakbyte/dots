@@ -1,5 +1,6 @@
 ---
 extensions:
+  - bierner.emojisense
   - eamodio.gitlens
   - golang.Go
   - ms-azuretools.vscode-docker
