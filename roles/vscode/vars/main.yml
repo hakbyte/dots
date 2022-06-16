@@ -2,7 +2,7 @@
 extensions:
   - bierner.emojisense
   - eamodio.gitlens
-  - golang.Go
+  - golang.go
   - jebbs.markdown-extended
   - ms-azuretools.vscode-docker
   - ms-vscode-remote.remote-containers
