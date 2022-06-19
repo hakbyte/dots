@@ -11,6 +11,7 @@
     "oneDarkPro.markdownStyle": true,
     "markdown.preview.typographer": true,
     "markdown.preview.doubleClickToSwitchToEditor": false,
+    "git.autofetch": true,
     "gitlens.currentLine.format": "${agoOrDate}${ • message|50?}",
     "gitlens.codeLens.enabled": false,
     "gitlens.statusBar.enabled": false,
