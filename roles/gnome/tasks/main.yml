@@ -61,7 +61,7 @@
 - name: Set favorite apps
   dconf:
     key: "/org/gnome/shell/favorite-apps"
-    value: "['org.gnome.Terminal.desktop', 'google-chrome.desktop', 'firefox-esr.desktop', 'org.gnome.gedit.desktop', 'wireshark.desktop', 'kali-burpsuite.desktop', 'bitwarden.desktop', 'obsidian.desktop', 'code.desktop', 'virtualbox.desktop', 'org.gnome.Nautilus.desktop']"
+    value: "['org.gnome.Terminal.desktop', 'google-chrome.desktop', 'firefox-esr.desktop', 'org.gnome.gedit.desktop', 'wireshark.desktop', 'kali-burpsuite.desktop', 'bitwarden.desktop', 'code.desktop', 'virtualbox.desktop', 'org.gnome.Nautilus.desktop']"
   tags:
     - gnome
 
