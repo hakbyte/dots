@@ -18,4 +18,3 @@
     - role: zathura
     - role: gtk
     - role: gnome
-    - role: vscode

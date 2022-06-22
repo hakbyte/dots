@@ -1,5 +1,0 @@
-// Place your key bindings in this file to override the defaults
-[
-    { "key": "ctrl+n", "command": "explorer.newFile" },
-    { "key": "ctrl+shift+n", "command": "explorer.newFolder" },
-]
