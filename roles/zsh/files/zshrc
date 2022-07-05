@@ -254,9 +254,9 @@ fi
 # Misc
 #
 
-# Set $GOPATH and add Go's binaries to $PATH
+# Set $PATH and $GOPATH
 export GOPATH="$HOME/.local/go"
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
 
 # Function to change the terminal title in Gnome Terminal
 precmd () {
