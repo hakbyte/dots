@@ -18,13 +18,6 @@
   tags:
     - gnome
 
-- name: Toggle fullscreen mode with Super + \
-  dconf:
-    key: "/org/gnome/desktop/wm/keybindings/toggle-fullscreen"
-    value: "['<Super>backslash']"
-  tags:
-    - gnome
-
 - name: Use Ctrl+Super+Right to switch to workspace to the right
   dconf:
     key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-left"
