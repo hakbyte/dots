@@ -265,7 +265,7 @@ tt() {
     export TITLE="$*"
 }
 
-# Load aliases
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
-fi
+# Source extra config files
+for f in ~/.config/zsh/*; do
+    source $f
+done
