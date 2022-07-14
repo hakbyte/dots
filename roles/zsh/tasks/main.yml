@@ -15,10 +15,14 @@
   tags:
     - zsh
 
-- name: Push aliases file
+- name: Push extra config files
   copy:
-    src: aliases
-    dest: ~/.config/zsh/aliases
+    src: "{{ item }}"
+    dest: ~/.config/zsh/{{ item }}
     mode: '600'
+  loop:
+    - aliases
+    - functions
+    - ctf
   tags:
     - zsh
