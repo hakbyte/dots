@@ -1,4 +1,12 @@
 ---
+- name: Create Zsh config directory
+  file:
+    path: ~/.config/zsh
+    state: directory
+    mode: '700'
+  tags:
+    - zsh
+
 - name: Push Zsh config
   copy:
     src: zshrc
