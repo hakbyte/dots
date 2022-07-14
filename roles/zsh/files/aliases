@@ -36,9 +36,6 @@ fi
 
 alias t='/usr/bin/tmux new -As main'
 alias tls='/usr/bin/tmux ls'
-tn() { /usr/bin/tmux new -As ${1:-main} }          # create new session (defaults to `main`)
-ta() { /usr/bin/tmux attach -t ${1:-main} }        # attatch to session (defaults to `main`)
-tk() { /usr/bin/tmux kill-session -t ${1:-main} }  # kill session (defaults to `main`)
 
 # Git
 
@@ -57,12 +54,3 @@ alias gsd='/usr/bin/git switch dev'
 alias gsm='/usr/bin/git switch main'
 alias gss='/usr/bin/git status -s'
 alias gst='/usr/bin/git status'
-
-#
-# CTF
-#
-
-alias cme='/usr/bin/crackmapexec'
-alias nc='/usr/bin/rlwrap nc'
-httpsrv() { python -m http.server ${1:-80} -d ${2:-.} }
-smbsrv() { impacket-smbserver ${1:-share} -d ${2:-.} }

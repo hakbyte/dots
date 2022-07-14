@@ -231,11 +231,6 @@ if [ -x /usr/bin/dircolors ]; then
     zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 fi
 
-# Some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Enable auto-suggestions based on the shell history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -255,15 +250,6 @@ fi
 # Set $PATH and $GOPATH
 export GOPATH="$HOME/.local/go"
 export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
-
-# Function to change the terminal title in Gnome Terminal
-precmd () {
-    print -Pn "\e]0;$TITLE\a"
-}
-
-tt() {
-    export TITLE="$*"
-}
 
 # Source extra config files
 for f in ~/.config/zsh/*; do
