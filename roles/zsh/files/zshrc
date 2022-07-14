@@ -119,8 +119,6 @@ configure_prompt() {
     # Set skull emoji for root terminal
     [ "$EUID" -eq 0 ] && prompt_sep=💀
     PROMPT=$'${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%B%F{%(#.red.blue)}%n'$prompt_sep$'%m%b%F{reset}:%B%F{%(#.blue.green)}%~%B${vcs_info_msg_0_%}%f%b%F{reset} ${prompt_symbol} '
-    # Right-side prompt with exit codes and background processes
-    RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
     unset prompt_sep
     PROMPT_EOL_MARK=""  # Hide EOL sign ('%')
 }
