@@ -18,7 +18,7 @@
 - name: Push aliases file
   copy:
     src: aliases
-    dest: ~/.aliases
+    dest: ~/.config/zsh/aliases
     mode: '600'
   tags:
     - zsh
