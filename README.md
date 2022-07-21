@@ -14,12 +14,12 @@ So how does it look like?
 # Usage
 
 > :warning: **Important:**
-> - To achieve similar results, install [Kali Linux](https://www.kali.org/)
-> 2022.2 with Gnome as the Desktop Environment
-> - Don't blindly run this playbook or your configuration files will be
-> overwritten! If you're new to Ansible, run the playbook in a VM and copy the
-> tidbits that interest you. Otherwise spend some time to learn how everything
-> fits together and adapt it to your environment.
+> - To achieve similar results, install [Kali Linux](https://www.kali.org/) with
+>   Gnome as the Desktop Environment
+> - Don't blindly run this playbook or your configuration files will be.
+>   overwritten! If you're new to Ansible, run the playbook in a VM and copy the
+>   tidbits that interest you. Otherwise spend some time to learn how everything
+>   fits together and adapt it to your environment.
 
 First install the dependencies:
 
