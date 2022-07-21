@@ -54,14 +54,3 @@ each role to find out.
 Check both `vars/all.yml` and `vars/pretasks.yml` for ways of customizing this
 setup.
 
-# TODO
-
-- [ ] Update homedirs role to only delete empty folders (see [remove empty dirs](https://www.reddit.com/r/ansible/comments/k9aqfq/remove_empty_dirs/))
-- [ ] Change `.face` picture
-- [x] Install [Emoji Selector](https://extensions.gnome.org/extension/1162/emoji-selector/)
-- [ ] Change Zsh's root prompt to red
-- [x] Add screenshot of current configuration
-- [ ] Fix missing glyph in vim-airline
-- [ ] Add *Features* section to `README.md`
-- [ ] Fix: vim colors don't work inside Tmux
-- [ ] Create GitHub issues for every TODO item
