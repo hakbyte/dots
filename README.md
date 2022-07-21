@@ -4,8 +4,9 @@ My Kali Linux dotfiles, powered by [Ansible](https://www.ansible.com/). Compared
 to other solutions I previously used to manage dotfiles, Ansible is way more
 flexible at the cost of *some* complexity ;)
 
-> :memo: You may also want to check out my other [Ansible playbook](https://github.com/hakbyte/flame)
-> for setting up Kali Linux. They are intended to complement each other.
+> :memo: **Note:** You may also want to check out my other
+> [Ansible playbook](https://github.com/hakbyte/flame) for setting up Kali
+> Linux. They are intended to complement each other.
 
 So how does it look like?
 
@@ -35,9 +36,9 @@ $ cd dots
 $ ansible-playbook -i hosts playbook.yml -e target=<TARGET>
 ```
 
-> :memo: Possible values for `<TARGET>` are `desktop` and `laptop`. The former
-> is fine tuned for a smaller screen (1920x1080 pixels) besides configuring the
-> touchpad.
+> :memo: **Note:** Possible values for `<TARGET>` are `desktop` and `laptop`.
+> The former is fine tuned for a smaller screen (1920x1080 pixels) besides
+> configuring the touchpad.
 
 It's also possible to run each Ansible role individually. If, let's say, you're
 only interested in my Vim config:
@@ -53,4 +54,3 @@ each role to find out.
 
 Check both `vars/all.yml` and `vars/pretasks.yml` for ways of customizing this
 setup.
-
