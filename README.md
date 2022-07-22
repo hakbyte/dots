@@ -20,7 +20,7 @@ So how does it look like?
 > - Don't blindly run this playbook or your configuration files will be.
 >   overwritten! If you're new to Ansible, run the playbook in a VM and copy the
 >   tidbits that interest you. Otherwise spend some time to learn how everything
->   fits together and adapt it to your environment.
+>   fits together and adapt it to your environment
 
 First install the dependencies:
 
@@ -36,7 +36,7 @@ $ cd dots
 $ ansible-playbook -i hosts playbook.yml -e target=<TARGET>
 ```
 
-> :memo: **Note:** Possible values for `<TARGET>` are `desktop` and `laptop`.
+> :memo: **Note:** possible values for `<TARGET>` are `desktop` and `laptop`.
 > The former is fine tuned for a smaller screen (1920x1080 pixels) besides
 > configuring the touchpad.
 
