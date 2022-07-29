@@ -244,7 +244,7 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 
 #
-# Misc
+# PATH
 #
 
 # Add ~/.local/bin to PATH
@@ -257,7 +257,10 @@ export PATH="$PATH:$GOPATH/bin"
 # Add Cargo's bin to PATH
 export PATH="$PATH:$HOME/.cargo/bin"
 
+#
 # Source extra config files
+#
+
 for f in ~/.config/zsh/*; do
     source $f
 done
