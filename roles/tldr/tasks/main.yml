@@ -1,0 +1,7 @@
+---
+- name: Update tldr database
+  command:
+    cmd: tldr --update
+    creates: ~/.local/share/tldr
+  tags:
+    - tldr
